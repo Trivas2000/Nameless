@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scene/players/player.gd" type="Script" id=1]
 [ext_resource path="res://texturas/dummy.png" type="Texture" id=2]
 
-[node name="player" type="Node2D"]
-script = ExtResource( 1 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 128, 127.5 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+speedx = 100
+accelerationX = 100
+
+[node name="Pivot" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Pivot"]
 texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 1 )
