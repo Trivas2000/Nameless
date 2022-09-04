@@ -6,7 +6,7 @@ extends KinematicBody2D
 export (int) var speedx =10
 export (int) var accelerationX =10
 
-var SPEED=100
+var SPEED=1000
 var accelerationY=0
 
 onready var sprite= $Pivot
