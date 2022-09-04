@@ -22,4 +22,4 @@ func _ready():
 func _physics_process(delta):
 	var movementp1:Vector2 = Input.get_vector("Izquierda","Derecha","Arriba","Abajo")
 	move_and_slide(movementp1*SPEED)
-	
+
