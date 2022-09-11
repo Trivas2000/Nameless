@@ -14,3 +14,5 @@ texture = 4
 [node name="player2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 48, 0 )
 inputindex = 2
+
+[node name="Node" type="Node" parent="."]
