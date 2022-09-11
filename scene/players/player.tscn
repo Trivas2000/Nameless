@@ -78,8 +78,6 @@ start_node = "idle"
 
 [node name="player" type="KinematicBody2D"]
 script = ExtResource( 1 )
-speedx = 100
-accelerationX = 100
 
 [node name="Pivot" type="Node2D" parent="."]
 
@@ -102,3 +100,6 @@ anims/run = SubResource( 4 )
 tree_root = SubResource( 9 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 10 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
