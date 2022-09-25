@@ -5,6 +5,7 @@ export var inputindex = 1
 export var texture=1
 var SPEED=200
 
+
 onready var sprite= $Pivot
 onready var sprite_text = $Pivot/Sprite
 
@@ -18,6 +19,7 @@ onready var green_dino = preload("res://texturas/personaje/sheets/DinoSprites - 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	anim_tree.active=true
 	if  (texture == 1):
 		sprite_text.set_texture(blue_dino)
@@ -45,3 +47,4 @@ func _physics_process(delta):
 		sprite.set_scale(Vector2(-1,1))
 	if movementp1.x>0:
 		sprite.set_scale(Vector2(1,1))
+		

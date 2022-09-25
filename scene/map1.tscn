@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scene/players/player2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/maptextures/1/top-down-collection-pack/Topview Fantasy Patreon Collection/single-dungeon-crawler-objects/PNG/dungeon-crawler-objects.png" type="Texture" id=2]
 [ext_resource path="res://texturas/maptextures/1/top-down-collection-pack/Topview Fantasy Patreon Collection/single-dungeon-crawler/PNG/dungeon-tileset.png" type="Texture" id=3]
 [ext_resource path="res://scene/players/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scene/players/Life.gd" type="Script" id=5]
+[ext_resource path="res://texturas/vidas/heart-icon.png" type="Texture" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 14, 16, 0, 16, 0, 5.66953, 14, 5.66953 )
@@ -262,3 +264,17 @@ texture = 4
 position = Vector2( 192, 16 )
 scale = Vector2( 0.5, 0.5 )
 inputindex = 2
+
+[node name="Life_section" type="CanvasLayer" parent="."]
+
+[node name="Life" type="Control" parent="Life_section"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+
+[node name="Hearts" type="TextureRect" parent="Life_section/Life"]
+margin_right = 60.0
+margin_bottom = 20.0
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 6 )
+stretch_mode = 2
