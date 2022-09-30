@@ -14,7 +14,7 @@ func _on_play_press():
 
 
 func _on_credits_press():
-	get_tree(). change_scene("res://scene/credits.tscn")
+	get_tree(). change_scene("res://scene/menu_scenes/credits.tscn")
 	
 func _on_exit_press():
 	get_tree().quit()
