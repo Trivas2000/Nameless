@@ -14,3 +14,5 @@ position = Vector2( -1.75, 1 )
 
 [node name="AnimationTree" parent="." index="3"]
 parameters/playback = SubResource( 1 )
+
+[node name="Position2D2" type="Position2D" parent="." index="5"]

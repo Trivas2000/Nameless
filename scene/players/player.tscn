@@ -101,3 +101,6 @@ anims/run = SubResource( 4 )
 tree_root = SubResource( 9 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 10 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 7, -16 )

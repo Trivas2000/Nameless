@@ -4,7 +4,7 @@ export (int) var accelerationX =10
 export var inputindex = 1
 export var texture=1
 var SPEED=200
-
+var canPick = true;
 
 onready var sprite= $Pivot
 onready var sprite_text = $Pivot/Sprite

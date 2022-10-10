@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scene/players/player2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/Texturas/dungeon-crawler-objects.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scene/players/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scene/players/Life.gd" type="Script" id=5]
 [ext_resource path="res://texturas/vidas/heart-icon.png" type="Texture" id=6]
+[ext_resource path="res://scene/interactive_objects/blackBook.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 15, 15, 0.0693054, 15, 0.0693054, 0, 15, 0 )
@@ -234,6 +235,8 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 8, 16, 8 )
 
 [node name="map1" type="TileMap"]
 position = Vector2( -112, -72 )
+collision_layer = 3
+collision_mask = 3
 format = 1
 __meta__ = {
 "_edit_vertical_guides_": [  ]
@@ -283,6 +286,8 @@ tile_data = PoolIntArray( -589796, 0, 0, -589794, 0, 0, -458721, 0, 0, -131071, 
 [node name="player" parent="TileMap3" instance=ExtResource( 1 )]
 position = Vector2( 18, 138 )
 scale = Vector2( 0.5, 0.5 )
+collision_layer = 3
+collision_mask = 3
 speedx = 100
 accelerationX = 100
 texture = 4
@@ -290,4 +295,11 @@ texture = 4
 [node name="player2" parent="TileMap3" instance=ExtResource( 4 )]
 position = Vector2( 261, 75 )
 scale = Vector2( 0.5, 0.5 )
+collision_layer = 3
+collision_mask = 3
 inputindex = 2
+
+[node name="blackBook" parent="." instance=ExtResource( 7 )]
+position = Vector2( 77, 88 )
+collision_layer = 3
+collision_mask = 3
