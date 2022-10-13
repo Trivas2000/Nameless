@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scene/players/player.gd" type="Script" id=1]
 [ext_resource path="res://texturas/personaje/sheets/DinoSprites - tard.png" type="Texture" id=2]
@@ -76,6 +76,9 @@ start_node = "idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=10]
 
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 29.5, 36.5 )
+
 [node name="player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -87,6 +90,9 @@ scale = Vector2( 2.91667, 3.53647 )
 texture = ExtResource( 2 )
 hframes = 24
 frame = 1
+
+[node name="Pick_dino" type="Position2D" parent="Pivot"]
+position = Vector2( 15, -16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -1 )
@@ -102,5 +108,9 @@ tree_root = SubResource( 9 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 10 )
 
-[node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 7, -16 )
+[node name="Detector" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Detector"]
+position = Vector2( -0.5, -28 )
+shape = SubResource( 11 )
