@@ -1,14 +1,14 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scene/players/player2.tscn" type="PackedScene" id=1]
-[ext_resource path="res://texturas/Texturas/dungeon-crawler-objects.png" type="Texture" id=2]
+[ext_resource path="res://texturas/dungeon-crawler-objects.png" type="Texture" id=2]
 [ext_resource path="res://texturas/Texturas/dungeon-tileset.png" type="Texture" id=3]
 [ext_resource path="res://scene/players/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scene/players/Life.gd" type="Script" id=5]
 [ext_resource path="res://texturas/vidas/heart-icon.png" type="Texture" id=6]
 [ext_resource path="res://scene/interactive_objects/blackBook.tscn" type="PackedScene" id=7]
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 points = PoolVector2Array( 15, 15, 0.0693054, 15, 0.0693054, 0, 15, 0 )
 
 [sub_resource type="TileSet" id=1]
@@ -64,14 +64,14 @@ points = PoolVector2Array( 15, 15, 0.0693054, 15, 0.0693054, 0, 15, 0 )
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 6 )
+4/shape = SubResource( 10 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
@@ -207,7 +207,7 @@ points = PoolVector2Array( 0, 8, 16, 8, 16, 16, 0, 16 )
 } ]
 2/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 8, 16, 8 )
 
 [sub_resource type="TileSet" id=8]
@@ -221,14 +221,14 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 8, 16, 8 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 9 )
+0/shape = SubResource( 11 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0

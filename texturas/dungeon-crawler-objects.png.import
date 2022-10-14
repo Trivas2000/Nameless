@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dungeon-crawler-objects.png-67497a0b778f2500365a1cfbae062ebe.stex"
+path="res://.import/dungeon-crawler-objects.png-a26a5918081fdbba09b883cdf0f7b69b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texturas/Texturas/dungeon-crawler-objects.png"
-dest_files=[ "res://.import/dungeon-crawler-objects.png-67497a0b778f2500365a1cfbae062ebe.stex" ]
+source_file="res://texturas/dungeon-crawler-objects.png"
+dest_files=[ "res://.import/dungeon-crawler-objects.png-a26a5918081fdbba09b883cdf0f7b69b.stex" ]
 
 [params]
 

@@ -50,8 +50,12 @@ func _physics_process(delta):
 		playback.travel("idle")
 	if movementp1.x<0:
 		sprite.set_scale(Vector2(-1,1))
+		if picked != null:
+			picked.global_position =pick_dino.global_position
 	if movementp1.x>0:
 		sprite.set_scale(Vector2(1,1))
+		if picked != null:
+			picked.global_position =pick_dino.global_position
 		
 	if (Input.is_action_just_pressed("ui_pick"+str(inputindex))):	
 		_pick_object()			
