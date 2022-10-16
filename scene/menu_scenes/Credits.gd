@@ -1,7 +1,7 @@
 extends MarginContainer
 
 
-onready var Back = $VBoxContainer/Back
+onready var Back = $ScrollContainer/VBoxContainer/Back
 
 func _ready():
 	Back.connect("pressed", self, "_on_back_press")
