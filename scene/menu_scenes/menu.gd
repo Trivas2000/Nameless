@@ -10,7 +10,7 @@ func _ready():
 	exit.connect("pressed", self, "_on_exit_press")
 
 func _on_play_press():
-	get_tree(). change_scene("res://scene/main.tscn")
+	get_tree(). change_scene("res://scene/characterSelector/characterSelector.tscn")
 
 
 func _on_credits_press():

@@ -256,14 +256,10 @@ tile_data = PoolIntArray( -851975, 0, 0, -851974, 0, 0, -851973, 0, 0, -786441, 
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 16, 128 )
 scale = Vector2( 0.5, 0.5 )
-speedx = 100
-accelerationX = 100
-texture = 4
 
 [node name="player2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 192, 16 )
 scale = Vector2( 0.5, 0.5 )
-inputindex = 2
 
 [node name="Life_section" type="CanvasLayer" parent="."]
 

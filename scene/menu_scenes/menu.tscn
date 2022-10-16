@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/Fondos/layers/parallax-mountain-montain-far.png" type="Texture" id=3]
 [ext_resource path="res://assets/Fondos/layers/parallax-mountain-foreground-trees.png" type="Texture" id=4]
 [ext_resource path="res://assets/font/2/OpenType (.otf)/Kaph-Italic.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://resources/theme.tres" type="Theme" id=6]
+[ext_resource path="res://resources/theme_small.tres" type="Theme" id=6]
 [ext_resource path="res://scene/menu_scenes/menu.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
@@ -72,6 +72,7 @@ align = 1
 margin_top = 204.0
 margin_right = 974.0
 margin_bottom = 280.0
+theme_type_variation = "smallLabel"
 text = "PLAY"
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
