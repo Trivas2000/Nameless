@@ -2,7 +2,7 @@ extends KinematicBody2D
 export (int) var speedx =10
 export (int) var accelerationX =10
 export var inputindex = 1
-export var texture = 1
+export var texture=1
 var SPEED=200
 
 var canPick = true;
@@ -11,10 +11,8 @@ var picked;
 
 var Black_book =preload("res://scene/interactive_objects/blackBook.tscn")
 
-
 onready var sprite= $Pivot
-onready var sprite_text = $Pivot/Sprite_one
-
+onready var sprite_text = $Pivot/Sprite
 
 onready var anim_player= $AnimationPlayer
 onready var anim_tree = $AnimationTree
@@ -26,14 +24,14 @@ onready var green_dino = preload("res://texturas/personaje/sheets/DinoSprites - 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	if (inputindex == 1):
-		texture = Game.texture_player_one
-	
-	if (inputindex == 2):
-		texture = Game.texture_player_two
-	
 	anim_tree.active=true
+	
+	if(inputindex==2):
+		texture=Game.texture_player_one
+	
+	if(inputindex==1):
+		texture=Game.texture_player_two
+	
 	if  (texture == 1):
 		sprite_text.set_texture(blue_dino)
 
