@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scene/players/player.gd" type="Script" id=1]
 [ext_resource path="res://texturas/personaje/sheets/DinoSprites - tard.png" type="Texture" id=2]
@@ -19,6 +19,40 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "cick"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 10, 11, 12, 11 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "hurt"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 14, 15, 16 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -57,6 +91,12 @@ tracks/0/keys = {
 "values": [ 2, 4, 3, 5, 6, 7, 8 ]
 }
 
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "cick"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "hurt"
+
 [sub_resource type="AnimationNodeAnimation" id=5]
 animation = "idle"
 
@@ -67,13 +107,22 @@ animation = "run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=8]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
 [sub_resource type="AnimationNodeStateMachine" id=9]
+states/cick/node = SubResource( 14 )
+states/cick/position = Vector2( 428.778, 172.86 )
+states/hurt/node = SubResource( 15 )
+states/hurt/position = Vector2( 713.222, 173.728 )
 states/idle/node = SubResource( 5 )
-states/idle/position = Vector2( 430, 59 )
+states/idle/position = Vector2( 427.926, 69.6667 )
 states/run/node = SubResource( 6 )
 states/run/position = Vector2( 714, 77 )
-transitions = [ "idle", "run", SubResource( 7 ), "run", "idle", SubResource( 8 ) ]
+transitions = [ "idle", "run", SubResource( 7 ), "run", "idle", SubResource( 8 ), "idle", "cick", SubResource( 16 ), "cick", "idle", SubResource( 17 ) ]
 start_node = "idle"
+graph_offset = Vector2( 0, 28.0616 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=10]
 
@@ -101,6 +150,8 @@ shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
+anims/cick = SubResource( 12 )
+anims/hurt = SubResource( 13 )
 anims/idle = SubResource( 3 )
 anims/run = SubResource( 4 )
 
