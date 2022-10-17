@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scene/players/player2.tscn" type="PackedScene" id=1]
-[ext_resource path="res://texturas/dungeon-crawler-objects.png" type="Texture" id=2]
+[ext_resource path="res://texturas/Texturas/dungeon-crawler-objects.png" type="Texture" id=2]
 [ext_resource path="res://texturas/Texturas/dungeon-tileset.png" type="Texture" id=3]
 [ext_resource path="res://scene/players/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scene/players/Life.gd" type="Script" id=5]
