@@ -389,3 +389,7 @@ inputindex = 2
 [node name="blackBook" parent="." instance=ExtResource( 7 )]
 position = Vector2( -40, -48 )
 collision_mask = 0
+
+[node name="blackBook2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -40, -48 )
+collision_mask = 0
