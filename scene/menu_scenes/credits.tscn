@@ -239,6 +239,7 @@ margin_top = 1268.0
 margin_right = 962.0
 margin_bottom = 1338.0
 text = "kyrise.itch.io"
+align = 1
 
 [node name="HSeparator9" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
 margin_top = 1342.0
@@ -247,8 +248,16 @@ margin_bottom = 1346.0
 theme = ExtResource( 1 )
 custom_styles/separator = SubResource( 2 )
 
-[node name="Back" type="Button" parent="ScrollContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+margin_left = 397.0
 margin_top = 1350.0
-margin_right = 962.0
+margin_right = 564.0
 margin_bottom = 1426.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Back" type="Button" parent="ScrollContainer/VBoxContainer/VBoxContainer"]
+margin_right = 167.0
+margin_bottom = 76.0
 text = "BACK"

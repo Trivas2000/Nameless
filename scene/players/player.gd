@@ -10,7 +10,7 @@ onready var pick_dino =$Pivot/Pick_dino
 var picked;
 
 var Black_book =preload("res://scene/interactive_objects/blackBook.tscn")
-
+var Red_key =preload("res://scene/interactive_objects/red_key.tscn")
 onready var sprite= $Pivot
 onready var sprite_text = $Pivot/Sprite
 
@@ -70,23 +70,52 @@ func _physics_process(delta):
 	
 func _pick_object(): 
 	if (canPick == false) :
+		if "blackBook" in picked.name:
+			_pick_book(picked)
+		if "red_key" in picked.name:
+			_pick_key(picked)
+		
+		
+	else :
+		for body in $Detector.get_overlapping_bodies():
+			if body.is_in_group("objects"):
+				if ("blackBook" in body.name) and canPick==true and body.picked == false:
+					_pick_book(body)
+					
+				if ("red_key" in body.name) and canPick==true and body.picked == false:
+					_pick_key(body)
+			
+
+func _pick_book(body):
+	if (canPick == false) :
 		self.remove_child(picked)
 		var black_book = Black_book.instance()
 		get_parent().add_child(black_book)
 		black_book.global_position =pick_dino.global_position
 		canPick=true
 	else :
-		for body in $Detector.get_overlapping_bodies():
-			if body.is_in_group("objects"):
-				if canPick==true and body.picked == false:
-					canPick = false
-					body.picked = true
-					#forma 2
-					body.queue_free()
-					picked = Black_book.instance()
-					self.add_child(picked)
-					picked.picked = true
-					picked.global_position =pick_dino.global_position
-			
-
+		canPick = false
+		body.picked = true
+		body.queue_free()
+		picked = Black_book.instance()
+		self.add_child(picked)
+		picked.picked = true
+		picked.global_position =pick_dino.global_position
+		
+		
+func _pick_key(body):
+	if (canPick == false) :
+		self.remove_child(picked)
+		var red_key = Red_key.instance()
+		get_parent().add_child(red_key)
+		red_key.global_position =pick_dino.global_position
+		canPick=true
+	else :
+		canPick = false
+		body.picked = true
+		body.queue_free()
+		picked = Red_key.instance()
+		self.add_child(picked)
+		picked.picked = true
+		picked.global_position =pick_dino.global_position
 				
