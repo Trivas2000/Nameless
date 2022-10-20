@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Fondos/skin_selector.png" type="Texture" id=1]
 [ext_resource path="res://scene/characterSelector/dino_1.tres" type="Texture" id=2]
 [ext_resource path="res://texturas/botones/pixelButton.png" type="Texture" id=3]
 [ext_resource path="res://scene/characterSelector/MarginContainer.gd" type="Script" id=4]
+[ext_resource path="res://resources/select_character.tres" type="Theme" id=5]
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 3 )
@@ -65,10 +66,10 @@ anchor_left = 0.089
 anchor_top = 0.5
 anchor_right = 0.089
 anchor_bottom = 0.5
-margin_left = 495.089
-margin_top = 56.5
-margin_right = 535.089
-margin_bottom = 96.5
+margin_left = 495.314
+margin_top = 59.0
+margin_right = 535.314
+margin_bottom = 99.0
 texture_normal = SubResource( 11 )
 expand = true
 
@@ -77,18 +78,18 @@ anchor_left = 0.335
 anchor_top = 0.52
 anchor_right = 0.335
 anchor_bottom = 0.52
-margin_left = -230.665
-margin_top = 45.0
-margin_right = -190.665
-margin_bottom = 85.0
+margin_left = -230.29
+margin_top = 48.0
+margin_right = -190.29
+margin_bottom = 88.0
 texture_normal = SubResource( 12 )
 expand = true
 
 [node name="right_player_two" type="TextureButton" parent="TextureRect"]
-margin_left = 432.0
-margin_top = 344.0
-margin_right = 472.0
-margin_bottom = 384.0
+margin_left = 424.0
+margin_top = 333.0
+margin_right = 464.0
+margin_bottom = 373.0
 texture_normal = SubResource( 13 )
 expand = true
 
@@ -97,12 +98,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.507
-margin_left = 404.5
-margin_top = 56.5
-margin_right = 444.5
-margin_bottom = 92.3
+margin_left = 405.0
+margin_top = 62.0
+margin_right = 445.0
+margin_bottom = 97.8
 texture_normal = SubResource( 14 )
 expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+margin_right = 974.0
+margin_bottom = 550.0
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer"]
+margin_right = 974.0
+margin_bottom = 41.0
+theme = ExtResource( 5 )
+text = "Press enter to select character"
+align = 1
 
 [connection signal="pressed" from="TextureRect/left_player_one" to="." method="_on_left_player_one_pressed"]
 [connection signal="pressed" from="TextureRect/left_player_two" to="." method="_on_left_player_two_pressed"]
