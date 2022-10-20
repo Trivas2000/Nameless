@@ -12,16 +12,16 @@ func _physics_process(delta):
 	if (Input.is_action_just_pressed("ui_accept")):
 		change_scene()
 	
-	if (Input.is_action_just_pressed("Izq1")):
+	if (Input.is_action_just_pressed("Izq2")):
 		_on_left_player_one_pressed()
 		
-	if (Input.is_action_just_pressed("Der1")):
+	if (Input.is_action_just_pressed("Der2")):
 		_on_right_player_one_pressed()
 	
-	if (Input.is_action_just_pressed("Izq2")):
+	if (Input.is_action_just_pressed("Izq1")):
 		_on_left_player_two_pressed()
 		
-	if (Input.is_action_just_pressed("Der2")):
+	if (Input.is_action_just_pressed("Der1")):
 		_on_right_player_two_pressed()
 	
 		
