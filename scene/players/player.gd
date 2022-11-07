@@ -65,6 +65,8 @@ func _physics_process(delta):
 		
 	if (Input.is_action_just_pressed("ui_pick"+str(inputindex))):	
 		_pick_object2()			
+	if (Input.is_action_just_pressed("ui_use_object"+str(inputindex))):
+		_use_object()
 
 
 	
@@ -97,4 +99,10 @@ func _pick_object(body):
 		self.add_child(picked)
 		picked.picked = true
 		picked.global_position =pick_dino.global_position
+		
+
+func _use_object():
+	#Si tiene algo tomado
+	if (canPick == false):
+		picked.use()
 		
