@@ -64,58 +64,45 @@ func _physics_process(delta):
 			picked.global_position =pick_dino.global_position
 		
 	if (Input.is_action_just_pressed("ui_pick"+str(inputindex))):	
-		_pick_object()			
+		_pick_object2()			
+	if (Input.is_action_just_pressed("ui_use_object"+str(inputindex))):
+		_use_object()
 
 
 	
-func _pick_object(): 
-	if (canPick == false) :
-		if "blackBook" in picked.name:
-			_pick_book(picked)
-		if "red_key" in picked.name:
-			_pick_key(picked)
-		
-		
+func _pick_object2(): 
+	if (canPick == false and is_instance_valid(picked)) :
+		_pick_object(picked)
 	else :
 		for body in $Detector.get_overlapping_bodies():
 			if body.is_in_group("objects"):
-				if ("blackBook" in body.name) and canPick==true and body.picked == false:
-					_pick_book(body)
-					
-				if ("red_key" in body.name) and canPick==true and body.picked == false:
-					_pick_key(body)
+				_pick_object(body)
+				return 
+				 
 			
 
-func _pick_book(body):
+func _pick_object(body):
 	if (canPick == false) :
 		self.remove_child(picked)
-		var black_book = Black_book.instance()
-		get_parent().add_child(black_book)
-		black_book.global_position =pick_dino.global_position
+		#var black_book = Black_book.instance()
+		
+		get_parent().add_child(picked)
+		picked.global_position =pick_dino.global_position
+		picked = null
 		canPick=true
 	else :
 		canPick = false
 		body.picked = true
-		body.queue_free()
-		picked = Black_book.instance()
+		#body.queue_free()
+		picked = body #Black_book.instance()
+		body.get_parent().remove_child(body)
 		self.add_child(picked)
 		picked.picked = true
 		picked.global_position =pick_dino.global_position
 		
+
+func _use_object():
+	#Si tiene algo tomado
+	if (canPick == false):
+		picked.use()
 		
-func _pick_key(body):
-	if (canPick == false) :
-		self.remove_child(picked)
-		var red_key = Red_key.instance()
-		get_parent().add_child(red_key)
-		red_key.global_position =pick_dino.global_position
-		canPick=true
-	else :
-		canPick = false
-		body.picked = true
-		body.queue_free()
-		picked = Red_key.instance()
-		self.add_child(picked)
-		picked.picked = true
-		picked.global_position =pick_dino.global_position
-				
