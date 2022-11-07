@@ -9,8 +9,8 @@ var canPick = true;
 onready var pick_dino =$Pivot/Pick_dino
 var picked;
 
-var Black_book =preload("res://scene/interactive_objects/blackBook.tscn")
-var Red_key =preload("res://scene/interactive_objects/red_key.tscn")
+var Black_book =preload("res://scene/interactive_objects/pickeable/blackBook.tscn")
+var Red_key =preload("res://scene/interactive_objects/pickeable/red_key.tscn")
 onready var sprite= $Pivot
 onready var sprite_text = $Pivot/Sprite
 
@@ -75,7 +75,7 @@ func _pick_object2():
 		_pick_object(picked)
 	else :
 		for body in $Detector.get_overlapping_bodies():
-			if body.is_in_group("objects"):
+			if body.is_in_group("objects_pickeable"):
 				_pick_object(body)
 				return 
 				 

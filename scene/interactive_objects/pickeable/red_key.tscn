@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://texturas/object/keys/key_01b.png" type="Texture" id=1]
-[ext_resource path="res://scene/interactive_objects/red_key.gd" type="Script" id=2]
+[ext_resource path="res://scene/interactive_objects/pickeable/red_key.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 3.0
