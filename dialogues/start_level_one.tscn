@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://dialogues/start_level_one.gd" type="Script" id=1]
+[ext_resource path="res://texturas/botones/f.png" type="Texture" id=2]
+
+[node name="box text" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="box" type="NinePatchRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 297.0
+margin_top = 300.0
+margin_right = 727.0
+margin_bottom = 550.0
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="box"]
+self_modulate = Color( 0.968627, 0.94902, 0.94902, 1 )
+margin_left = 45.0
+margin_top = 55.0
+margin_right = 1180.0
+margin_bottom = 490.0
+rect_scale = Vector2( 0.3, 0.3 )
+theme_type_variation = "BigLabel"
+text = "To start you will need to find the
+ key that opens the instruction 
+booklet 
+
+Press enter to continue..
+"
