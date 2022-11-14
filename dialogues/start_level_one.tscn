@@ -18,16 +18,16 @@ margin_bottom = 550.0
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="box"]
-self_modulate = Color( 0.968627, 0.94902, 0.94902, 1 )
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 45.0
 margin_top = 55.0
 margin_right = 1180.0
 margin_bottom = 490.0
 rect_scale = Vector2( 0.3, 0.3 )
 theme_type_variation = "BigLabel"
-text = "To start you will need to find the
- key that opens the instruction 
-booklet 
+text = "To start you will need to find the key that opens the instruction  booklet 
 
 Press enter to continue..
 "
+autowrap = true

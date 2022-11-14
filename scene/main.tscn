@@ -57,6 +57,8 @@ script = ExtResource( 3 )
 [node name="map1" parent="Viewports/ViewportContainer2/Viewport2" instance=ExtResource( 1 )]
 position = Vector2( 110, -32 )
 
+[node name="Node2D" parent="." instance=ExtResource( 5 )]
+
 [node name="pauseMenu" parent="." instance=ExtResource( 4 )]
 anchor_bottom = 0.0
 margin_left = 313.0
@@ -64,5 +66,3 @@ margin_top = 101.0
 margin_right = 710.0
 margin_bottom = 483.0
 rect_scale = Vector2( 1, 0.994365 )
-
-[node name="Node2D" parent="." instance=ExtResource( 5 )]
