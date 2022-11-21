@@ -105,4 +105,9 @@ func _use_object():
 	#Si tiene algo tomado
 	if (canPick == false):
 		picked.use()
+	#Si no tiene nada tomado, revisa si hay un objeto no pickeable
+	else:
+		for body in $Detector.get_overlapping_bodies():
+			if body.is_in_group("objects_not_pickeable"):
+				body.use()
 		
