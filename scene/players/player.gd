@@ -78,6 +78,10 @@ func _pick_object2():
 			if body.is_in_group("objects_pickeable"):
 				_pick_object(body)
 				return 
+		for object in $Detector.get_overlapping_areas():
+			if object.is_in_group("objects_pickeable"):
+				_pick_object(object)
+				return 
 				 
 			
 
