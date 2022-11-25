@@ -10,6 +10,8 @@
 [ext_resource path="res://scene/interactive_objects/pickeable/red_key.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Environment/Tiles.png" type="Texture" id=9]
 [ext_resource path="res://assets/Environment/Props.png" type="Texture" id=10]
+[ext_resource path="res://scene/interactive_objects/laser/laser.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scene/players/spawner.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scene/interactive_objects/no_picked/cofre.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scene/interactive_objects/pickeable/Martillo.tscn" type="PackedScene" id=12]
 
@@ -558,5 +560,15 @@ centered_textures = true
 format = 1
 tile_data = PoolIntArray( -2948904, 0, 0, -2948902, 0, 0, -2948900, 0, 0, -2817832, 0, 0, -2817830, 0, 0, -2817828, 0, 0, -2686760, 0, 0, -2686758, 0, 0, -2686756, 0, 0, 720892, 2, 0, 2097132, 0, 0, 2097134, 0, 0, 2097136, 0, 0, 2228204, 0, 0, 2228206, 0, 0, 2228208, 0, 0, 2359276, 0, 0, 2359278, 0, 0, 2359280, 0, 0 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1, 67 )
+[node name="spawner" parent="." instance=ExtResource( 12 )]
+position = Vector2( 79, 1173 )
+rotation = -1.5708
+scene = ExtResource( 11 )
+
+[node name="spawner2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 40, 1172 )
+scene = ExtResource( 11 )
+
+[node name="spawner3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 119, 1172 )
+scene = ExtResource( 11 )
