@@ -10,8 +10,6 @@
 [ext_resource path="res://scene/interactive_objects/pickeable/red_key.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Environment/Tiles.png" type="Texture" id=9]
 [ext_resource path="res://assets/Environment/Props.png" type="Texture" id=10]
-[ext_resource path="res://scene/interactive_objects/laser/laser.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scene/players/spawner.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scene/interactive_objects/no_picked/cofre.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scene/interactive_objects/pickeable/Martillo.tscn" type="PackedScene" id=12]
 
@@ -562,13 +560,12 @@ tile_data = PoolIntArray( -2948904, 0, 0, -2948902, 0, 0, -2948900, 0, 0, -28178
 
 [node name="spawner" parent="." instance=ExtResource( 12 )]
 position = Vector2( 79, 1173 )
-rotation = -1.5708
-scene = ExtResource( 11 )
 
 [node name="spawner2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 40, 1172 )
-scene = ExtResource( 11 )
 
 [node name="spawner3" parent="." instance=ExtResource( 12 )]
 position = Vector2( 119, 1172 )
-scene = ExtResource( 11 )
+
+[node name="martillo" parent="." instance=ExtResource( 12 )]
+position = Vector2( -57, 80 )

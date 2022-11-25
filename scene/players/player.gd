@@ -8,9 +8,7 @@ var SPEED=200
 var canPick = true;
 onready var pick_dino =$Pivot/Pick_dino
 var picked;
-
-var Black_book =preload("res://scene/interactive_objects/pickeable/blackBook.tscn")
-var Red_key =preload("res://scene/interactive_objects/pickeable/red_key.tscn")
+ 
 onready var sprite= $Pivot
 onready var sprite_text = $Pivot/Sprite
 
@@ -96,12 +94,12 @@ func _pick_object(body):
 		canPick=true
 	else :
 		canPick = false
-		body.picked = true
+		body.is_picked = true
 		#body.queue_free()
 		picked = body #Black_book.instance()
 		body.get_parent().remove_child(body)
 		self.add_child(picked)
-		picked.picked = true
+		picked.is_picked = true
 		picked.global_position =pick_dino.global_position
 		
 

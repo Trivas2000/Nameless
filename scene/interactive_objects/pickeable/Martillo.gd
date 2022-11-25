@@ -1,16 +1,20 @@
 extends Area2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+onready var anim_player= $AnimationPlayer
+onready var anim_tree = $AnimationTree
+onready var playback = anim_tree.get("parameters/playback")
 
 
-# Called when the node enters the scene tree for the first time.
+var is_picked=false;
+
+
+#onready var pos_player = get_node("../../players/player/Position2D").global_position;
 func _ready():
-	pass # Replace with function body.
+	anim_tree.active=true
+ 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+#add an action to this object
+func use():
+	playback.travel("golpe")
