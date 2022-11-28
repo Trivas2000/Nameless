@@ -53,12 +53,16 @@ func _physics_process(delta):
 	else:
 		playback.travel("idle")
 	if movementp1.x<0:
-		sprite.set_scale(Vector2(-1,1))
-		if picked != null:
+		sprite.set_scale(Vector2(-0.5,0.5))
+		if is_instance_valid(picked):
+			if picked.is_in_group("objet_reflectable"):
+				picked.set_scale(Vector2(-1,1)) 
 			picked.global_position =pick_dino.global_position
 	if movementp1.x>0:
-		sprite.set_scale(Vector2(1,1))
-		if picked != null:
+		sprite.set_scale(Vector2(0.5,0.5))
+		if is_instance_valid(picked):
+			if picked.is_in_group("objet_reflectable"):
+				picked.set_scale(Vector2(1,1))
 			picked.global_position =pick_dino.global_position
 		
 	if (Input.is_action_just_pressed("ui_pick"+str(inputindex))):	

@@ -7,4 +7,4 @@ func _ready():
 
 #add an action to this object
 func use():
-	print("Usando el libro")
+	pass
