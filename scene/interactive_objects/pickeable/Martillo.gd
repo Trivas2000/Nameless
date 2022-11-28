@@ -17,4 +17,7 @@ func _ready():
 
 #add an action to this object
 func use():
-	playback.travel("golpe")
+	if is_picked == true:
+		playback.travel("golpe")
+		print("Usando martillo") 
+		
