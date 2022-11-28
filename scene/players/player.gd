@@ -9,16 +9,17 @@ var canPick = true;
 onready var pick_dino =$Pivot/Pick_dino
 var picked;
  
-onready var sprite= $Pivot
+onready var pivot= $Pivot
 onready var sprite_text = $Pivot/Sprite
-
-onready var anim_player= $AnimationPlayer
-onready var anim_tree = $AnimationTree
-onready var playback = anim_tree.get("parameters/playback")
 onready var blue_dino = preload("res://texturas/personaje/sheets/DinoSprites - doux.png")
 onready var red_dino = preload("res://texturas/personaje/sheets/DinoSprites - mort.png")
 onready var yellow_dino = preload("res://texturas/personaje/sheets/DinoSprites - tard.png")
 onready var green_dino = preload("res://texturas/personaje/sheets/DinoSprites - vita.png")
+
+
+onready var anim_player= $AnimationPlayer
+onready var anim_tree = $AnimationTree
+onready var playback = anim_tree.get("parameters/playback")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -53,13 +54,13 @@ func _physics_process(delta):
 	else:
 		playback.travel("idle")
 	if movementp1.x<0:
-		sprite.set_scale(Vector2(-0.5,0.5))
+		pivot.set_scale(Vector2(-0.5,0.5))
 		if is_instance_valid(picked):
 			if picked.is_in_group("objet_reflectable"):
 				picked.set_scale(Vector2(-1,1)) 
 			picked.global_position =pick_dino.global_position
 	if movementp1.x>0:
-		sprite.set_scale(Vector2(0.5,0.5))
+		pivot.set_scale(Vector2(0.5,0.5))
 		if is_instance_valid(picked):
 			if picked.is_in_group("objet_reflectable"):
 				picked.set_scale(Vector2(1,1))
