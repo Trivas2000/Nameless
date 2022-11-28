@@ -4,6 +4,7 @@ export (int) var accelerationX =10
 export var inputindex = 1
 export var texture=1
 var SPEED=200
+var lives=100
 
 var canPick = true;
 onready var pick_dino =$Pivot/Pick_dino
@@ -70,6 +71,15 @@ func _physics_process(delta):
 		_pick_object2()			
 	if (Input.is_action_just_pressed("ui_use_object"+str(inputindex))):
 		_use_object()
+	#Daño
+	for object in $Detector.get_overlapping_areas():
+			if object.is_in_group("Damage"):
+				playback.travel("hurt")
+				lives=lives-1
+				if (lives<=0):
+					position=Vector2(46,91)
+					lives=100
+				return 
 
 
 	
