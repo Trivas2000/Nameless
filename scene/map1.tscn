@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scene/players/player2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/Texturas/dungeon-crawler-objects.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://scene/players/spawner.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scene/interactive_objects/laser/laser.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scene/detectorLaser.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scene/interactive_objects/pickeable/Martillo.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -574,3 +575,6 @@ scene = ExtResource( 13 )
 
 [node name="detectorLaser" parent="." instance=ExtResource( 14 )]
 position = Vector2( 88, 318 )
+
+[node name="martillo" parent="." instance=ExtResource( 15 )]
+position = Vector2( -35, 87 )
