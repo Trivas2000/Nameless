@@ -9,7 +9,6 @@ var speed = 100
 func _ready():
 	velocity = speed*transform.x
 	
-	
 func _physics_process(delta):
 	position += velocity *delta
 	

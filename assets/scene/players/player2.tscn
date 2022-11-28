@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/scene/players/player.tscn" type="PackedScene" id=1]
+
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[node name="player" instance=ExtResource( 1 )]
+
+[node name="Sprite" parent="Pivot" index="0"]
+position = Vector2( 0, -22 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( -1.75, 1 )
+
+[node name="AnimationTree" parent="." index="3"]
+parameters/playback = SubResource( 1 )
+
+[node name="Position2D2" type="Position2D" parent="." index="5"]

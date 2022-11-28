@@ -1,20 +1,19 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://scene/players/player2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/scene/players/player2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/Texturas/dungeon-crawler-objects.png" type="Texture" id=2]
 [ext_resource path="res://texturas/Texturas/dungeon-tileset.png" type="Texture" id=3]
-[ext_resource path="res://scene/players/player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scene/players/Life.gd" type="Script" id=5]
+[ext_resource path="res://assets/scene/players/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/scene/players/Life.gd" type="Script" id=5]
 [ext_resource path="res://texturas/vidas/heart-icon.png" type="Texture" id=6]
-[ext_resource path="res://scene/interactive_objects/pickeable/blackBook.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scene/interactive_objects/pickeable/red_key.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/scene/interactive_objects/pickeable/blackBook.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/scene/interactive_objects/pickeable/red_key.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Environment/Tiles.png" type="Texture" id=9]
 [ext_resource path="res://assets/Environment/Props.png" type="Texture" id=10]
-[ext_resource path="res://scene/interactive_objects/pickeable/no_picked/cofre.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scene/players/spawner.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scene/interactive_objects/laser/laser.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scene/detectorLaser.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scene/interactive_objects/pickeable/Martillo.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/scene/interactive_objects/laser/laser.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/scene/players/spawner.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/scene/interactive_objects/no_picked/cofre.tscn" type="PackedScene" id=11]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -562,19 +561,14 @@ format = 1
 tile_data = PoolIntArray( -2948904, 0, 0, -2948902, 0, 0, -2948900, 0, 0, -2817832, 0, 0, -2817830, 0, 0, -2817828, 0, 0, -2686760, 0, 0, -2686758, 0, 0, -2686756, 0, 0, 720892, 2, 0, 2097132, 0, 0, 2097134, 0, 0, 2097136, 0, 0, 2228204, 0, 0, 2228206, 0, 0, 2228208, 0, 0, 2359276, 0, 0, 2359278, 0, 0, 2359280, 0, 0 )
 
 [node name="spawner" parent="." instance=ExtResource( 12 )]
-position = Vector2( 48, 1179 )
-scene = ExtResource( 13 )
+position = Vector2( 79, 1173 )
+rotation = -1.5708
+scene = ExtResource( 11 )
 
 [node name="spawner2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 85, 1085 )
-scene = ExtResource( 13 )
+position = Vector2( 40, 1172 )
+scene = ExtResource( 11 )
 
 [node name="spawner3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 126, 1011 )
-scene = ExtResource( 13 )
-
-[node name="detectorLaser" parent="." instance=ExtResource( 14 )]
-position = Vector2( 88, 318 )
-
-[node name="martillo" parent="." instance=ExtResource( 15 )]
-position = Vector2( -35, 87 )
+position = Vector2( 119, 1172 )
+scene = ExtResource( 11 )
