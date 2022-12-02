@@ -73,7 +73,9 @@ func _physics_process(delta):
 		_use_object()
 	#Daño
 	for object in $Detector.get_overlapping_areas():
-			if object.is_in_group("Damage"):
+			if object.is_in_group("Damage") :
+				if (picked is Hammer and (picked.get_detector() == object)):
+					return
 				playback.travel("hurt")
 				lives=lives-1
 				if (lives<=0):
@@ -104,9 +106,10 @@ func _pick_object(body):
 		#var black_book = Black_book.instance()
 		
 		get_parent().add_child(picked)
-		picked.global_position =pick_dino.global_position
+		picked.global_position =pick_dino.global_position 
 		picked = null
 		canPick=true
+		
 	else :
 		canPick = false
 		body.is_picked = true
@@ -115,7 +118,7 @@ func _pick_object(body):
 		body.get_parent().remove_child(body)
 		self.add_child(picked)
 		picked.is_picked = true
-		picked.global_position =pick_dino.global_position
+		picked.global_position =pick_dino.global_position 
 		
 
 func _use_object():
