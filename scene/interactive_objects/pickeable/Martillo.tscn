@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://texturas/object/Martilla/Martelo.png" type="Texture" id=1]
 [ext_resource path="res://scene/interactive_objects/pickeable/Martillo.gd" type="Script" id=2]
@@ -6,13 +6,11 @@
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 13.0
 
-[sub_resource type="CapsuleShape2D" id=12]
-height = 0.0
-
 [sub_resource type="Animation" id=3]
 length = 0.001
+loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/path = NodePath("Pivot:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -23,12 +21,24 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/damage_detector/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "golpe"
 length = 1.2
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/path = NodePath("Pivot:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -39,13 +49,24 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0, -33.1, 91.0, 0.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/damage_detector/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.7, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "idle"
 length = 0.5
-loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/path = NodePath("Pivot:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -57,53 +78,37 @@ tracks/0/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=6]
-animation = "golpe"
-
-[sub_resource type="AnimationNodeAnimation" id=7]
-animation = "idle"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=8]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=9]
-
-[sub_resource type="AnimationNodeStateMachine" id=10]
-states/golpe/node = SubResource( 6 )
-states/golpe/position = Vector2( 599, 112.333 )
-states/idle/node = SubResource( 7 )
-states/idle/position = Vector2( 248.333, 107 )
-transitions = [ "golpe", "idle", SubResource( 8 ), "idle", "golpe", SubResource( 9 ) ]
-start_node = "idle"
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
+[sub_resource type="CapsuleShape2D" id=12]
+radius = 7.0
+height = 0.0
 
 [node name="martillo" type="Area2D" groups=["objects_pickeable", "objet_reflectable"]]
+collision_layer = 4
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.184364, -16.1235 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 1 )
-flip_h = true
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( 1, -14 )
+position = Vector2( 1, -13 )
 shape = SubResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 2, -27 )
-shape = SubResource( 12 )
-disabled = true
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+physics_interpolation_mode = 2
 playback_process_mode = 0
 anims/RESET = SubResource( 3 )
 anims/golpe = SubResource( 4 )
 anims/idle = SubResource( 5 )
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 10 )
-anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 11 )
+[node name="Pivot" type="Node2D" parent="."]
+
+[node name="damage_detector" type="Area2D" parent="Pivot" groups=["Damage", "objets_to_destroy"]]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/damage_detector"]
+position = Vector2( 8, -25 )
+shape = SubResource( 12 )
+disabled = true
+
+[node name="Sprite" type="Sprite" parent="Pivot"]
+position = Vector2( -1, -15 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+flip_h = true

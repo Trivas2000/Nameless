@@ -4,7 +4,6 @@
 [ext_resource path="res://scene/players/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scene/players/player2.tscn" type="PackedScene" id=4]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
