@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://texturas/Texturas/LVL2/lava/16x16.png" type="Texture" id=1]
+[ext_resource path="res://scene/interactive_objects/no_picked/lava/Agua.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14, 13 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 18.5, 17 )
+
+[node name="Agua" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 368.848, 1.98676, 45.7772, 44.8235 )
+
+[node name="Detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.5, 1 )
+shape = SubResource( 2 )

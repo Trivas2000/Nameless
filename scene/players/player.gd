@@ -81,9 +81,7 @@ func _physics_process(delta):
 					return
 				playback.travel("hurt")
 				lives=lives-1
-				if (lives<=0):
-					position=Vector2(46,91)
-					lives=100
+				check_is_dead()
 				return 
 			if object.is_in_group("teletransportador"):
 				if (canTeletransport == true):
@@ -131,7 +129,7 @@ func _pick_object(body):
 		
 		body.get_parent().remove_child(body)
 		picked = body
-		if body.is_in_group("restituible"):
+		if body.is_in_group("restituible") or body.is_in_group("picked_by"):
 			picked.picked_by = self;
 		
 		self.add_child(picked)
@@ -143,7 +141,7 @@ func _use_object():
 	#Si tiene algo tomado
 	if (canPick == false):	
 		picked.use()
-		if picked.is_in_group("restituible"):
+		if picked.is_in_group("restituible") or picked.is_in_group("picked_by"):
 			_pick_object(picked)
 	#Si no tiene nada tomado, revisa si hay un objeto no pickeable
 	else:
@@ -159,3 +157,19 @@ func can_teletransport(indice):
 		return true
 	else:
 		return false
+		
+		
+func check_is_dead():
+	if (lives<=0):
+		position=Vector2(46,91)
+		lives=100
+		
+		
+func burning(damage):
+	playback.travel("hurt")
+	lives = lives-damage
+	check_is_dead()
+	
+	
+	
+	
