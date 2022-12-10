@@ -9,6 +9,7 @@ var lives=100
 var canPick = true;
 onready var pick_dino =$Pivot/Pick_dino
 var picked;
+var canTeletransport=0;
  
 onready var pivot= $Pivot
 onready var sprite_text = $Pivot/Sprite
@@ -82,6 +83,11 @@ func _physics_process(delta):
 					position=Vector2(46,91)
 					lives=100
 				return 
+			if object.is_in_group("teletransportador"):
+				if (canTeletransport == 1):
+					if (Input.is_action_just_pressed("ui_use_object"+str(inputindex))):
+						object.use(self)
+
 
 
 	
