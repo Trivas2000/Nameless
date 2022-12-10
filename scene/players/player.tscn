@@ -173,7 +173,7 @@ tree_root = SubResource( 9 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 10 )
 
-[node name="Detector" type="Area2D" parent="."]
+[node name="Detector" type="Area2D" parent="." groups=["players"]]
 collision_mask = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Detector"]

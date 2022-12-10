@@ -9,8 +9,10 @@ var lives=100
 var canPick = true;
 onready var pick_dino =$Pivot/Pick_dino
 var picked;
-var canTeletransport=0;
- 
+
+var canTeletransport=false;
+var tel= [false,false,false]
+
 onready var pivot= $Pivot
 onready var sprite_text = $Pivot/Sprite
 onready var blue_dino = preload("res://texturas/personaje/sheets/DinoSprites - doux.png")
@@ -84,7 +86,7 @@ func _physics_process(delta):
 					lives=100
 				return 
 			if object.is_in_group("teletransportador"):
-				if (canTeletransport == 1):
+				if (canTeletransport == true):
 					if (Input.is_action_just_pressed("ui_use_object"+str(inputindex))):
 						object.use(self)
 
@@ -108,20 +110,30 @@ func _pick_object2():
 
 func _pick_object(body):
 	if (canPick == false) :
-		self.remove_child(picked)
-		#var black_book = Black_book.instance()
-		
-		get_parent().add_child(picked)
-		picked.global_position =pick_dino.global_position 
+				
+		self.remove_child(picked) 
+		if body.is_in_group("restituible"):
+			var c=100
+			while (c>200):
+				c=c-1
+			get_parent().add_child(picked)
+			picked.reaparecer()
+			
+		else:
+			get_parent().add_child(picked)
+			picked.global_position =pick_dino.global_position 
 		picked = null
 		canPick=true
 		
 	else :
 		canPick = false
-		body.is_picked = true
-		#body.queue_free()
-		picked = body #Black_book.instance()
+		body.is_picked = true 
+		
 		body.get_parent().remove_child(body)
+		picked = body
+		if body.is_in_group("restituible"):
+			picked.picked_by = self;
+		
 		self.add_child(picked)
 		picked.is_picked = true
 		picked.global_position =pick_dino.global_position 
@@ -129,11 +141,21 @@ func _pick_object(body):
 
 func _use_object():
 	#Si tiene algo tomado
-	if (canPick == false):
+	if (canPick == false):	
 		picked.use()
+		if picked.is_in_group("restituible"):
+			_pick_object(picked)
 	#Si no tiene nada tomado, revisa si hay un objeto no pickeable
 	else:
 		for body in $Detector.get_overlapping_bodies():
 			if body.is_in_group("objects_not_pickeable"):
 				body.use()
 		
+
+func can_teletransport(indice):
+	tel[indice] = true;
+	if tel[0]==true and (tel[1]== true and tel[2]==true):
+		canTeletransport=true
+		return true
+	else:
+		return false

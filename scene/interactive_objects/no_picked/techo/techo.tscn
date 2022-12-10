@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://texturas/Texturas/LVL2/Wooden House.png" type="Texture" id=1]
+[ext_resource path="res://scene/interactive_objects/no_picked/techo/techo.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 70, 41 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 98.5, 69.5 )
+
+[node name="techo" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="pivot" type="Node2D" parent="."]
+scale = Vector2( 2.3, 2.3 )
+
+[node name="Sprite" type="Sprite" parent="pivot"]
+position = Vector2( 4, 0 )
+texture = ExtResource( 1 )
+hframes = 3
+frame = 2
+
+[node name="Sprite2" type="Sprite" parent="pivot"]
+position = Vector2( 24, 0 )
+texture = ExtResource( 1 )
+hframes = 3
+frame = 2
+
+[node name="Sprite3" type="Sprite" parent="pivot"]
+position = Vector2( 45, 0 )
+texture = ExtResource( 1 )
+hframes = 3
+frame = 2
+
+[node name="Sprite4" type="Sprite" parent="pivot"]
+position = Vector2( 65.2174, -0.434783 )
+texture = ExtResource( 1 )
+hframes = 3
+frame = 2
+
+[node name="Detector" type="Area2D" parent="."]
+
+[node name="detZone" type="CollisionShape2D" parent="Detector"]
+position = Vector2( 68, -2 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 67.5, -0.5 )
+shape = SubResource( 2 )
