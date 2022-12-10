@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=2]
+[gd_scene load_steps=103 format=2]
 
 [ext_resource path="res://scene/interactive_objects/no_picked/wall/yellow_wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/Texturas/LVL2/TX Tileset Grass.png" type="Texture" id=2]
@@ -30,6 +30,9 @@
 [ext_resource path="res://scene/interactive_objects/no_picked/lava/lavaLeft.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scene/interactive_objects/no_picked/lava/lavaright.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scene/interactive_objects/no_picked/lava/LavaDown.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scene/interactive_objects/no_picked/Agua/AguaEsq.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scene/interactive_objects/no_picked/Agua/Agua.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scene/interactive_objects/no_picked/Agua/AguaInt.tscn" type="PackedScene" id=33]
 
 [sub_resource type="TileSet" id=1]
 0/name = "TX Tileset Grass.png 0"
@@ -4871,6 +4874,142 @@ position = Vector2( 3019, 2732 )
 
 [node name="LavaDown342" parent="LavaDown" instance=ExtResource( 30 )]
 position = Vector2( 3064, 2685 )
+
+[node name="water" type="Node2D" parent="."]
+
+[node name="AguaEsq" parent="water" instance=ExtResource( 31 )]
+position = Vector2( -1362, -204 )
+
+[node name="AguaEsq2" parent="water" instance=ExtResource( 31 )]
+position = Vector2( -1517, -205 )
+rotation = -1.5708
+
+[node name="Agua" parent="water" instance=ExtResource( 32 )]
+position = Vector2( -1485, -206 )
+rotation = 1.5708
+
+[node name="Agua2" parent="water" instance=ExtResource( 32 )]
+position = Vector2( -1458, -206 )
+rotation = 1.5708
+
+[node name="Agua3" parent="water" instance=ExtResource( 32 )]
+position = Vector2( -1431, -206 )
+rotation = 1.5708
+
+[node name="Agua4" parent="water" instance=ExtResource( 32 )]
+position = Vector2( -1403, -206 )
+rotation = 1.5708
+
+[node name="Agua5" parent="water" instance=ExtResource( 32 )]
+position = Vector2( -1383, -206 )
+rotation = 1.5708
+
+[node name="Agua6" parent="water" instance=ExtResource( 32 )]
+position = Vector2( -1363, -171 )
+rotation = 3.14159
+
+[node name="Agua8" parent="water" instance=ExtResource( 32 )]
+position = Vector2( -1518, -174 )
+
+[node name="Agua9" parent="water" instance=ExtResource( 32 )]
+position = Vector2( -1518, -146 )
+
+[node name="AguaInt" parent="water" instance=ExtResource( 33 )]
+position = Vector2( -1488, -174 )
+
+[node name="AguaInt2" parent="water" instance=ExtResource( 33 )]
+position = Vector2( -1487, -147 )
+
+[node name="AguaInt3" parent="water" instance=ExtResource( 33 )]
+position = Vector2( -1459, -147 )
+
+[node name="AguaInt4" parent="water" instance=ExtResource( 33 )]
+position = Vector2( -1431, -147 )
+
+[node name="AguaInt5" parent="water" instance=ExtResource( 33 )]
+position = Vector2( -1402, -147 )
+
+[node name="AguaInt6" parent="water" instance=ExtResource( 33 )]
+position = Vector2( -1382, -147 )
+
+[node name="water2" type="Node2D" parent="."]
+
+[node name="AguaEsq" parent="water2" instance=ExtResource( 31 )]
+position = Vector2( -1362, -204 )
+
+[node name="AguaEsq3" parent="water2" instance=ExtResource( 31 )]
+position = Vector2( -1362, -143 )
+rotation = 1.5708
+
+[node name="AguaEsq2" parent="water2" instance=ExtResource( 31 )]
+position = Vector2( -1517, -205 )
+rotation = -1.5708
+
+[node name="Agua" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1485, -206 )
+rotation = 1.5708
+
+[node name="Agua2" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1458, -206 )
+rotation = 1.5708
+
+[node name="Agua3" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1431, -206 )
+rotation = 1.5708
+
+[node name="Agua4" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1403, -206 )
+rotation = 1.5708
+
+[node name="Agua5" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1383, -206 )
+rotation = 1.5708
+
+[node name="Agua6" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1363, -171 )
+rotation = 3.14159
+
+[node name="Agua7" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1394, -141 )
+rotation = -1.5708
+
+[node name="Agua10" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1422, -142 )
+rotation = -1.5708
+
+[node name="Agua11" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1448, -142 )
+rotation = -1.5708
+
+[node name="Agua12" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1474, -142 )
+rotation = -1.5708
+
+[node name="Agua13" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1501, -142 )
+rotation = -1.5708
+
+[node name="Agua14" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1521, -141 )
+rotation = -1.5708
+
+[node name="Agua8" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1518, -174 )
+
+[node name="Agua9" parent="water2" instance=ExtResource( 32 )]
+position = Vector2( -1518, -146 )
+
+[node name="AguaInt" parent="water2" instance=ExtResource( 33 )]
+position = Vector2( -1460, -174 )
+
+[node name="AguaInt2" parent="water2" instance=ExtResource( 33 )]
+position = Vector2( -1432, -174 )
+
+[node name="AguaInt3" parent="water2" instance=ExtResource( 33 )]
+position = Vector2( -1403, -174 )
+
+[node name="AguaInt4" parent="water2" instance=ExtResource( 33 )]
+position = Vector2( -1388, -174 )
 
 [node name="TileMap3" type="TileMap" parent="."]
 tile_set = SubResource( 70 )
