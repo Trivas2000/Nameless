@@ -1,4 +1,4 @@
-class_name Hammer
+class_name Espada
 extends Area2D
 
 
@@ -6,16 +6,20 @@ extends Area2D
 onready var anim_player= $AnimationPlayer 
 
 var is_picked=false;
+
+
 onready var damage_area= $Pivot/damage_detector
- 
+
+#onready var pos_player = get_node("../../players/player/Position2D").global_position;
 func _ready():
 	pass#anim_tree.active=true
  
 
 #add an action to this object
 func use():
+	print("usando espada")
 	if is_picked == true:
-		anim_player.play("golpe")
+		anim_player.play("Attack")
 		anim_player.seek(0, true) 
 		
 

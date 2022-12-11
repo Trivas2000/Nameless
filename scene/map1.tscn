@@ -512,15 +512,12 @@ stretch_mode = 2
 
 [node name="blackBook" parent="." instance=ExtResource( 7 )]
 position = Vector2( 66, -45 )
-collision_mask = 0
 
 [node name="blackBook2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 154, -37 )
-collision_mask = 0
 
 [node name="blackBook3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 743, -466 )
-collision_mask = 0
 
 [node name="red_key" parent="." instance=ExtResource( 8 )]
 position = Vector2( 728, -104 )

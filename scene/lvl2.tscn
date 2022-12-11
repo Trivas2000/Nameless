@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=2]
+[gd_scene load_steps=122 format=2]
 
 [ext_resource path="res://scene/interactive_objects/no_picked/wall/yellow_wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://texturas/Texturas/LVL2/TX Tileset Grass.png" type="Texture" id=2]
@@ -39,6 +39,12 @@
 [ext_resource path="res://scene/interactive_objects/pickeable/conteiners/waterContainerSpawn.tscn" type="PackedScene" id=37]
 [ext_resource path="res://scene/interactive_objects/pickeable/keys/red_key.tscn" type="PackedScene" id=38]
 [ext_resource path="res://scene/interactive_objects/no_picked/plants/plant1.tscn" type="PackedScene" id=39]
+[ext_resource path="res://scene/interactive_objects/no_picked/plants/plant2.tscn" type="PackedScene" id=40]
+[ext_resource path="res://scene/interactive_objects/no_picked/plants/DetectorBala.tscn" type="PackedScene" id=41]
+[ext_resource path="res://scene/interactive_objects/no_picked/plants/Planta3.tscn" type="PackedScene" id=42]
+[ext_resource path="res://scene/interactive_objects/no_picked/plants/Plant3.tscn" type="PackedScene" id=43]
+[ext_resource path="res://scene/interactive_objects/pickeable/Arms/Espada.tscn" type="PackedScene" id=44]
+[ext_resource path="res://scene/interactive_objects/pickeable/Martillo.tscn" type="PackedScene" id=45]
 
 [sub_resource type="TileSet" id=1]
 0/name = "TX Tileset Grass.png 0"
@@ -5540,6 +5546,89 @@ position = Vector2( -460, -1798 )
 [node name="techo7" parent="Techos" instance=ExtResource( 21 )]
 position = Vector2( -190, -1837 )
 
+[node name="Plantas" type="Node2D" parent="."]
+
+[node name="plant1" parent="Plantas" instance=ExtResource( 39 )]
+position = Vector2( -1328, 226 )
+
+[node name="plant2" parent="Plantas" instance=ExtResource( 39 )]
+position = Vector2( -1194, 182 )
+
+[node name="plant3" parent="Plantas" instance=ExtResource( 39 )]
+position = Vector2( -1187, 332 )
+
+[node name="plant4" parent="Plantas" instance=ExtResource( 39 )]
+position = Vector2( -1476, 214 )
+
+[node name="plant5" parent="Plantas" instance=ExtResource( 39 )]
+position = Vector2( -1013, 246 )
+
+[node name="plantBullet" parent="Plantas" instance=ExtResource( 40 )]
+position = Vector2( -998, 173 )
+
+[node name="Planta4" parent="Plantas" instance=ExtResource( 42 )]
+position = Vector2( -1494, 169 )
+
+[node name="Plant5" parent="Plantas" instance=ExtResource( 43 )]
+position = Vector2( -1230, 148 )
+
+[node name="Plant4" parent="Plantas" instance=ExtResource( 43 )]
+position = Vector2( -1275, 148 )
+
+[node name="DetectorBala" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -935, 175 )
+
+[node name="DetectorBala3" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1280, 389 )
+rotation = 1.5708
+
+[node name="DetectorBala4" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1229, 387 )
+rotation = 1.5708
+
+[node name="DetectorBala6" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1278, 421 )
+rotation = 1.5708
+
+[node name="DetectorBala7" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1227, 419 )
+rotation = 1.5708
+
+[node name="DetectorBala8" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1282, 405 )
+rotation = 1.5708
+
+[node name="DetectorBala9" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1231, 403 )
+rotation = 1.5708
+
+[node name="DetectorBala2" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1531, 169 )
+
+[node name="DetectorBala5" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1535, 183 )
+
+[node name="DetectorBala10" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -916, 177 )
+
+[node name="DetectorBala11" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1562, 164 )
+
+[node name="DetectorBala12" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -955, 164 )
+
+[node name="DetectorBala13" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1535, 220 )
+
+[node name="DetectorBala14" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1536, 263 )
+
+[node name="DetectorBala15" parent="Plantas" instance=ExtResource( 41 )]
+position = Vector2( -1537, 154 )
+
+[node name="plant6" parent="Plantas" instance=ExtResource( 39 )]
+position = Vector2( -1378, 334 )
+
 [node name="blackBook" parent="." instance=ExtResource( 12 )]
 position = Vector2( -623, -1145 )
 
@@ -5555,7 +5644,7 @@ position = Vector2( -1444, -179 )
 position = Vector2( -1058, -180 )
 
 [node name="red_key" parent="." instance=ExtResource( 38 )]
-position = Vector2( 222, 99 )
+position = Vector2( 146, 151 )
 
 [node name="Door" parent="." instance=ExtResource( 27 )]
 position = Vector2( 156, 20 )
@@ -5563,5 +5652,8 @@ position = Vector2( 156, 20 )
 [node name="Door2" parent="." instance=ExtResource( 27 )]
 position = Vector2( -1249, 500 )
 
-[node name="plant1" parent="." instance=ExtResource( 39 )]
-position = Vector2( 177, 187 )
+[node name="Espada" parent="." instance=ExtResource( 44 )]
+position = Vector2( 165, 80 )
+
+[node name="martillo" parent="." instance=ExtResource( 45 )]
+position = Vector2( 224, 89 )

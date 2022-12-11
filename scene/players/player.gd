@@ -79,6 +79,7 @@ func _physics_process(delta):
 			if object.is_in_group("Damage") :
 				if (picked is Hammer and (picked.get_detector() == object)):
 					return
+				print("detecta objeto de daño")
 				playback.travel("hurt")
 				lives=lives-1
 				check_is_dead()

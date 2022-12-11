@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Martelo.png-fb1edb0dd918fc2ab434f9b49239b28d.stex"
+path="res://.import/Martelo.png-24370dc749e04b497cb9e61e321f1c00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texturas/object/Martilla/Martelo.png"
-dest_files=[ "res://.import/Martelo.png-fb1edb0dd918fc2ab434f9b49239b28d.stex" ]
+source_file="res://texturas/object/Armas/Martelo.png"
+dest_files=[ "res://.import/Martelo.png-24370dc749e04b497cb9e61e321f1c00.stex" ]
 
 [params]
 

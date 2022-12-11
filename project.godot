@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Area2D",
+"class": "Espada",
+"language": "GDScript",
+"path": "res://scene/interactive_objects/pickeable/Arms/Espada.gd"
+}, {
+"base": "Area2D",
 "class": "Hammer",
 "language": "GDScript",
 "path": "res://scene/interactive_objects/pickeable/Martillo.gd"
 } ]
 _global_script_class_icons={
+"Espada": "",
 "Hammer": ""
 }
 
