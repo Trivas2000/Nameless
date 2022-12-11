@@ -3,7 +3,6 @@
 [ext_resource path="res://assets/scene/players/player.gd" type="Script" id=1]
 [ext_resource path="res://texturas/personaje/sheets/DinoSprites - tard.png" type="Texture" id=2]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 13.75, 7 )
 
