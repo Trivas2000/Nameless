@@ -1,0 +1,160 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://texturas/Texturas/LVL2/Wooden House.png" type="Texture" id=1]
+[ext_resource path="res://scene/interactive_objects/no_picked/doors/Door_2.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 16.5, 16 )
+
+[sub_resource type="Animation" id=22]
+resource_name = "IDLE"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=23]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "close"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 17, 24, 10 ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "open"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 10, 24, 17, 3 ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "stay_open"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "IDLE"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "close"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "open"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "stay_open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachine" id=27]
+states/IDLE/node = SubResource( 7 )
+states/IDLE/position = Vector2( 117.667, 56.3333 )
+states/close/node = SubResource( 8 )
+states/close/position = Vector2( 253.667, 187 )
+states/open/node = SubResource( 9 )
+states/open/position = Vector2( 364.333, 56.284 )
+states/stay_open/node = SubResource( 18 )
+states/stay_open/position = Vector2( 552.333, 63.4444 )
+transitions = [ "IDLE", "open", SubResource( 10 ), "open", "close", SubResource( 11 ), "close", "open", SubResource( 12 ), "close", "IDLE", SubResource( 13 ), "open", "stay_open", SubResource( 19 ), "stay_open", "close", SubResource( 20 ) ]
+start_node = "IDLE"
+graph_offset = Vector2( -1, 19 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=28]
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 16, 14 )
+
+[node name="Door_2" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+hframes = 7
+vframes = 5
+frame = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.5, 0 )
+shape = SubResource( 21 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="."]
+anims/IDLE = SubResource( 22 )
+anims/RESET = SubResource( 23 )
+anims/close = SubResource( 24 )
+anims/open = SubResource( 25 )
+anims/stay_open = SubResource( 26 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 27 )
+anim_player = NodePath("../AnimationPlayer3")
+parameters/playback = SubResource( 28 )
+
+[node name="Detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+position = Vector2( 0, -4 )
+shape = SubResource( 29 )

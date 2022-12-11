@@ -8,6 +8,13 @@ onready var timer = $Timer
 var canPick = true;
 onready var pick_dino =$Pivot/Pick_dino
 var picked;
+
+var canTeletransport=false;
+var tel= [false,false,false]
+
+
+
+
 onready var pivot= $Pivot
 onready var sprite_text = $Pivot/Sprite
 onready var blue_dino = preload("res://texturas/personaje/sheets/DinoSprites - doux.png")
@@ -15,6 +22,7 @@ onready var red_dino = preload("res://texturas/personaje/sheets/DinoSprites - mo
 onready var yellow_dino = preload("res://texturas/personaje/sheets/DinoSprites - tard.png")
 onready var green_dino = preload("res://texturas/personaje/sheets/DinoSprites - vita.png")
 onready var life = $"../../Life_section/Life"
+
 
 
 onready var anim_player= $AnimationPlayer
@@ -54,10 +62,10 @@ func _physics_process(delta):
 	objects()
 	#Daño
 	for object in $Detector.get_overlapping_areas():
-			if object.is_in_group("Damage") :
-				damage()	
-				if (picked is Hammer and (picked.get_detector() == object)):
-					return
+		if object.is_in_group("Damage") :
+			if (picked is Hammer and (picked.get_detector() == object)):
+				return
+			damage()	
 				
 	return 	
 		
@@ -131,6 +139,10 @@ func _pick_object(body):
 		body.is_picked = true
 		picked = body #Black_book.instance()
 		body.get_parent().remove_child(body)
+		picked = body
+		if body.is_in_group("restituible") or body.is_in_group("picked_by"):
+			picked.picked_by = self;
+		
 		self.add_child(picked)
 		picked.is_picked = true
 		picked.global_position =pick_dino.global_position 
@@ -138,13 +150,40 @@ func _pick_object(body):
 
 func _use_object():
 	#Si tiene algo tomado
-	if (canPick == false):
+	if (canPick == false):	
 		picked.use()
+		if picked.is_in_group("restituible") or picked.is_in_group("picked_by"):
+			_pick_object(picked)
 	#Si no tiene nada tomado, revisa si hay un objeto no pickeable
 
 	for body in $Detector.get_overlapping_bodies():
 			if body.is_in_group("objects_not_pickeable"):
 				body.use()
+		
+
+func can_teletransport(indice):
+	tel[indice] = true;
+	if tel[0]==true and (tel[1]== true and tel[2]==true):
+		canTeletransport=true
+		return true
+	else:
+		return false
+		
+		
+func check_is_dead():
+	if (lives<=0):
+		position=Vector2(46,91)
+		lives=100
+		
+		
+func burning(damage):
+	playback.travel("hurt")
+	lives = lives-damage
+	check_is_dead()
+	
+	
+	
+	
 
 
 func _on_explotion_area_entered(area):
