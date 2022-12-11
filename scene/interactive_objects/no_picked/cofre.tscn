@@ -119,6 +119,7 @@ states/stay_open/node = SubResource( 9 )
 states/stay_open/position = Vector2( 788.333, 85.6667 )
 transitions = [ "close", "open", SubResource( 10 ), "open", "stay_open", SubResource( 11 ) ]
 start_node = "close"
+graph_offset = Vector2( 235.607, 0 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=13]
 

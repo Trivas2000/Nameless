@@ -11,6 +11,7 @@ onready var pick_dino =$Pivot/Pick_dino
 var picked;
  
 onready var pivot= $Pivot
+
 onready var sprite_text = $Pivot/Sprite
 onready var blue_dino = preload("res://texturas/personaje/sheets/DinoSprites - doux.png")
 onready var red_dino = preload("res://texturas/personaje/sheets/DinoSprites - mort.png")
@@ -80,6 +81,7 @@ func _physics_process(delta):
 					position=Vector2(46,91)
 					lives=100
 				return 
+	
 
 
 	
@@ -123,8 +125,38 @@ func _use_object():
 	if (canPick == false):
 		picked.use()
 	#Si no tiene nada tomado, revisa si hay un objeto no pickeable
-	else:
-		for body in $Detector.get_overlapping_bodies():
+
+	for body in $Detector.get_overlapping_bodies():
 			if body.is_in_group("objects_not_pickeable"):
-				body.use()
+				if body.name == 'cofre' and canPick == false:
+					print("hola")
+					if picked.name == 'red_key':
+						print("hola2")
+						body.use()
+				else:
+					body.use()
+				
 		
+
+#piso explosivo
+func _on_explotion_area_entered(area):
+	get_parent().get_node("explotion/AnimationPlayer").play("explotion")
+
+func _on_explotion2_area_entered(area):
+	get_parent().get_node("explotion2/AnimationPlayer").play("explotion")
+
+func _on_explotion3_area_entered(area):
+	get_parent().get_node("explotion3/AnimationPlayer").play("explotion")
+
+func _on_explotion4_area_entered(area):
+	get_parent().get_node("explotion4/AnimationPlayer").play("explotion")
+
+func _on_explotion5_area_entered(area):
+	get_parent().get_node("explotion5/AnimationPlayer").play("explotion")
+
+func _on_explotion6_area_entered(area):
+	get_parent().get_node("explotion6/AnimationPlayer").play("explotion")
+
+
+
+
