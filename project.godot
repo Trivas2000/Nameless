@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Area2D",
+"class": "Espada",
+"language": "GDScript",
+"path": "res://scene/interactive_objects/pickeable/Arms/Espada.gd"
+}, {
+"base": "Area2D",
 "class": "Hammer",
 "language": "GDScript",
 "path": "res://scene/interactive_objects/pickeable/Martillo.gd"
 } ]
 _global_script_class_icons={
+"Espada": "",
 "Hammer": ""
 }
 
@@ -147,6 +153,11 @@ ui_use_object2={
  ]
 }
 message_one={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777221,"unicode":0,"echo":false,"script":null)
+ ]
+}
+tele_instruction={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777221,"unicode":0,"echo":false,"script":null)
  ]

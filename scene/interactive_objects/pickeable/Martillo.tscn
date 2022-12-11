@@ -49,6 +49,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0, -33.1, 91.0, 0.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/damage_detector/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.7, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "idle"
@@ -67,6 +79,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=12]
+radius = 7.0
 height = 0.0
 
 [node name="martillo" type="Area2D" groups=["objects_pickeable", "objet_reflectable"]]
@@ -90,12 +103,12 @@ anims/idle = SubResource( 5 )
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/damage_detector"]
-position = Vector2( 2, -27 )
+position = Vector2( 8, -25 )
 shape = SubResource( 12 )
 disabled = true
 
 [node name="Sprite" type="Sprite" parent="Pivot"]
-position = Vector2( 0.184364, -16.1235 )
+position = Vector2( -1, -15 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 flip_h = true

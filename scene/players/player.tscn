@@ -123,7 +123,7 @@ auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachine" id=9]
 states/cick/node = SubResource( 14 )
-states/cick/position = Vector2( 428.778, 172.86 )
+states/cick/position = Vector2( 429.42, 174.017 )
 states/hurt/node = SubResource( 15 )
 states/hurt/position = Vector2( 713.222, 173.728 )
 states/idle/node = SubResource( 5 )

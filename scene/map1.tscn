@@ -7,7 +7,7 @@
 [ext_resource path="res://scene/players/Life.gd" type="Script" id=5]
 [ext_resource path="res://texturas/vidas/heart-icon.png" type="Texture" id=6]
 [ext_resource path="res://scene/interactive_objects/pickeable/blackBook.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scene/interactive_objects/pickeable/red_key.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scene/interactive_objects/pickeable/keys/red_key.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Environment/Tiles.png" type="Texture" id=9]
 [ext_resource path="res://assets/Environment/Props.png" type="Texture" id=10]
 [ext_resource path="res://scene/interactive_objects/no_picked/cofre.tscn" type="PackedScene" id=11]
@@ -535,15 +535,12 @@ stretch_mode = 2
 
 [node name="blackBook" parent="." instance=ExtResource( 7 )]
 position = Vector2( 247, 128 )
-collision_mask = 0
 
 [node name="blackBook2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 247, 19 )
-collision_mask = 0
 
 [node name="blackBook3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 743, -466 )
-collision_mask = 0
 
 [node name="TileMap3" type="TileMap" parent="."]
 tile_set = SubResource( 8 )

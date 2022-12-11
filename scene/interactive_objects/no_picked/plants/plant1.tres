@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=2]
+
+[ext_resource path="res://texturas/Texturas/LVL2/Plant.png" type="Texture" id=1]
+
+[resource]
+atlas = ExtResource( 1 )
+region = Rect2( 3.94383, 128.064, 1051.57, 97.9469 )
