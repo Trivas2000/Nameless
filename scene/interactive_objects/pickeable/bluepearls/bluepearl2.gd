@@ -10,7 +10,7 @@ var cont=200;
 
 
 func _ready():
-	print(position)
+
 	add_to_group("objects_pickeable")
 
 #Al usarse debe mostrar en pantalla un mensaje

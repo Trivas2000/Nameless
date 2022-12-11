@@ -9,7 +9,9 @@ height = 0.0
 [sub_resource type="CapsuleShape2D" id=2]
 height = 8.0
 
-[node name="lavaContainer" type="RigidBody2D"]
+[node name="lavaContainer" type="RigidBody2D" groups=["container", "picked_by"]]
+collision_layer = 4
+collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 2 )
 

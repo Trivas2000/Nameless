@@ -21,9 +21,9 @@ func _ready():
 
 
 func _physics_process(delta):
-	detect_player ()
+	detect_player()
 
-func detect_player ():
+func detect_player():
 	for body in detector.get_overlapping_bodies():
 		if body.is_in_group("players"):
 			body.burning(damage)
