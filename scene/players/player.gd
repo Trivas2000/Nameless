@@ -8,6 +8,13 @@ onready var timer = $Timer
 var canPick = true;
 onready var pick_dino =$Pivot/Pick_dino
 var picked;
+
+var canTeletransport=false;
+var tel= [false,false,false]
+
+
+
+
 onready var pivot= $Pivot
 onready var sprite_text = $Pivot/Sprite
 onready var blue_dino = preload("res://texturas/personaje/sheets/DinoSprites - doux.png")
@@ -15,6 +22,7 @@ onready var red_dino = preload("res://texturas/personaje/sheets/DinoSprites - mo
 onready var yellow_dino = preload("res://texturas/personaje/sheets/DinoSprites - tard.png")
 onready var green_dino = preload("res://texturas/personaje/sheets/DinoSprites - vita.png")
 onready var life = $"../../Life_section/Life"
+
 
 
 onready var anim_player= $AnimationPlayer
@@ -54,10 +62,10 @@ func _physics_process(delta):
 	objects()
 	#Daño
 	for object in $Detector.get_overlapping_areas():
-			if object.is_in_group("Damage") :
-				damage()	
-				if (picked is Hammer and (picked.get_detector() == object)):
-					return
+		if object.is_in_group("Damage") :
+			if (picked is Hammer and (picked.get_detector() == object)):
+				return
+			damage()	
 				
 	return 	
 		
