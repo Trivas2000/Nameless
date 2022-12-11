@@ -9,10 +9,7 @@ var lives=100
 var canPick = true;
 onready var pick_dino =$Pivot/Pick_dino
 var picked;
-
-var canTeletransport=false;
-var tel= [false,false,false]
-
+ 
 onready var pivot= $Pivot
 onready var sprite_text = $Pivot/Sprite
 onready var blue_dino = preload("res://texturas/personaje/sheets/DinoSprites - doux.png")
@@ -79,16 +76,12 @@ func _physics_process(delta):
 			if object.is_in_group("Damage") :
 				if (picked is Hammer and (picked.get_detector() == object)):
 					return
-				print("detecta objeto de daño")
 				playback.travel("hurt")
 				lives=lives-1
-				check_is_dead()
+				if (lives<=0):
+					position=Vector2(46,91)
+					lives=100
 				return 
-			if object.is_in_group("teletransportador"):
-				if (canTeletransport == true):
-					if (Input.is_action_just_pressed("ui_use_object"+str(inputindex))):
-						object.use(self)
-
 
 
 	
@@ -109,25 +102,19 @@ func _pick_object2():
 
 func _pick_object(body):
 	if (canPick == false) :
-				
-		self.remove_child(picked) 
-		if body.is_in_group("restituible"):
-			var c=100
-			while (c>200):
-				c=c-1
-			get_parent().add_child(picked)
-			picked.reaparecer()
-			
-		else:
-			get_parent().add_child(picked)
-			picked.global_position =pick_dino.global_position 
+		self.remove_child(picked)
+		#var black_book = Black_book.instance()
+		
+		get_parent().add_child(picked)
+		picked.global_position =pick_dino.global_position 
 		picked = null
 		canPick=true
 		
 	else :
 		canPick = false
-		body.is_picked = true 
-		
+		body.is_picked = true
+		#body.queue_free()
+		picked = body #Black_book.instance()
 		body.get_parent().remove_child(body)
 		picked = body
 		if body.is_in_group("restituible") or body.is_in_group("picked_by"):
