@@ -1,3 +1,4 @@
+class_name Hammer
 extends Area2D
 
 
@@ -8,7 +9,7 @@ onready var anim_player= $AnimationPlayer
 
 
 var is_picked=false;
-
+onready var damage_area= $Pivot/damage_detector
 
 #onready var pos_player = get_node("../../players/player/Position2D").global_position;
 func _ready():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scene/players/player.gd" type="Script" id=1]
 [ext_resource path="res://texturas/personaje/sheets/DinoSprites - tard.png" type="Texture" id=2]
@@ -113,15 +113,13 @@ animation = "run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=18]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=19]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=20]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=21]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=22]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachine" id=9]
 states/cick/node = SubResource( 14 )
@@ -132,7 +130,7 @@ states/idle/node = SubResource( 5 )
 states/idle/position = Vector2( 427.926, 69.6667 )
 states/run/node = SubResource( 6 )
 states/run/position = Vector2( 714, 77 )
-transitions = [ "idle", "run", SubResource( 7 ), "run", "idle", SubResource( 8 ), "idle", "cick", SubResource( 16 ), "cick", "idle", SubResource( 17 ), "cick", "hurt", SubResource( 18 ), "hurt", "run", SubResource( 19 ), "run", "hurt", SubResource( 20 ), "idle", "hurt", SubResource( 21 ), "hurt", "idle", SubResource( 22 ), "hurt", "cick", SubResource( 23 ) ]
+transitions = [ "idle", "run", SubResource( 7 ), "run", "idle", SubResource( 8 ), "idle", "cick", SubResource( 16 ), "cick", "idle", SubResource( 17 ), "cick", "hurt", SubResource( 18 ), "run", "hurt", SubResource( 20 ), "idle", "hurt", SubResource( 21 ), "hurt", "idle", SubResource( 22 ) ]
 start_node = "idle"
 graph_offset = Vector2( -115.541, 31.2288 )
 
@@ -180,3 +178,7 @@ collision_mask = 22
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Detector"]
 position = Vector2( 1, -11.75 )
 shape = SubResource( 11 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.2
+one_shot = true
