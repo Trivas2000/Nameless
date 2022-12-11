@@ -21,6 +21,7 @@ onready var anim_player= $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	lives=maxlives
@@ -140,7 +141,35 @@ func _use_object():
 	if (canPick == false):
 		picked.use()
 	#Si no tiene nada tomado, revisa si hay un objeto no pickeable
-	else:
-		for body in $Detector.get_overlapping_bodies():
+
+	for body in $Detector.get_overlapping_bodies():
 			if body.is_in_group("objects_not_pickeable"):
 				body.use()
+
+
+func _on_explotion_area_entered(area):
+	get_parent().get_node("explotion/AnimationPlayer").play("explotion")
+
+
+func _on_explotion2_area_entered(area):
+	get_parent().get_node("explotion2/AnimationPlayer").play("explotion")
+	damage()
+
+
+func _on_explotion3_area_entered(area):
+	get_parent().get_node("explotion3/AnimationPlayer").play("explotion")
+	damage()
+
+
+func _on_explotion4_area_entered(area):
+	get_parent().get_node("explotion4/AnimationPlayer").play("explotion")
+	damage()
+
+
+func _on_explotion5_area_entered(area):
+	get_parent().get_node("explotion5/AnimationPlayer").play("explotion")
+	damage()
+
+func _on_explotion6_area_entered(area):
+	get_parent().get_node("explotion6/AnimationPlayer").play("explotion")
+	damage()

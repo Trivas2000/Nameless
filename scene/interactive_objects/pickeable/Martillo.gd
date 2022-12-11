@@ -20,10 +20,8 @@ func _ready():
 func use():
 	if is_picked == true:
 		anim_player.play("golpe")
-		anim_player.seek(0, true) 
+		anim_player.seek(0, true)
+		print("Usando martillo") 
 		
-
-
 func get_detector():
 	return damage_area
-	

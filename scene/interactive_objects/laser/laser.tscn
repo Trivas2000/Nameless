@@ -56,8 +56,8 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=4]
 
 [node name="Laser" type="Area2D" groups=["Damage", "laser"]]
-collision_layer = 20
-collision_mask = 4
+collision_layer = 8
+collision_mask = 5
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -14,25 +14,20 @@ func _ready():
 	add_to_group("objects_not_pickeable")
 	anim_tree.active=true
 
-# warning-ignore:unused_argument
+
 func _physics_process(delta):
 	if (used == false):
 		playback.travel("close")
 	else:
 		playback.travel("stay_open")
-		
-	
-	
+
 #add an action to this object
 func use():
-	
 	if (used == false):
-		used = true
-			
-		playback.travel("open")
+		
+		used = true;
+		playback.travel("chest")
 		if (book):
 			var instance = book.instance()
 			get_parent().add_child(instance)
 			instance.global_position = global_position+Vector2.UP*3
-
-
