@@ -23,3 +23,5 @@ func use():
 		anim_player.seek(0, true)
 		print("Usando martillo") 
 		
+func get_detector():
+	return damage_area

@@ -86,10 +86,10 @@ anims/idle = SubResource( 5 )
 
 [node name="Pivot" type="Node2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="Pivot"]
+[node name="damage_detector" type="Area2D" parent="Pivot" groups=["Damage", "objets_to_destroy"]]
 collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/damage_detector"]
 position = Vector2( 2, -27 )
 shape = SubResource( 12 )
 disabled = true
