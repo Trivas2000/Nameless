@@ -1,7 +1,7 @@
 extends KinematicBody2D
 export var inputindex = 1
 export var texture=1
-var SPEED=200
+var SPEED=400
 var maxlives=3
 var lives
 onready var timer = $Timer
@@ -54,7 +54,6 @@ func _ready():
 
 	else:
 		sprite_text.set_texture(green_dino)
-
 func _physics_process(delta):
 	movement()
 	objects()
@@ -63,7 +62,14 @@ func _physics_process(delta):
 		if object.is_in_group("Damage") :
 			if (picked is Hammer and (picked.get_detector() == object)):
 				return
-			damage(1)	
+			if (picked is Espada and  (picked.get_detector() == object)):
+				return
+			if (picked is EspadaMetal and  (picked.get_detector() == object)):
+				return 
+			if object.is_in_group("plant"):
+				damage(0.5)
+			else:
+				damage(1)	
 				
 	return 	
 		
@@ -184,9 +190,7 @@ func check_is_dead():
 		
 		
 func burning(damage):
-	playback.travel("hurt")
-	lives = lives-damage
-	check_is_dead()
+	damage(1)
 	
 	
 	

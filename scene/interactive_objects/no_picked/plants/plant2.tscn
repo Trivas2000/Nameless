@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://texturas/Texturas/LVL2/Plant.png" type="Texture" id=1]
 [ext_resource path="res://scene/interactive_objects/no_picked/plants/plant2.gd" type="Script" id=2]
@@ -81,6 +81,10 @@ start_node = "atack2"
 [sub_resource type="CapsuleShape2D" id=4]
 height = 0.0
 
+[sub_resource type="CapsuleShape2D" id=10]
+radius = 23.0
+height = 10.0
+
 [node name="plantBullet" type="StaticBody2D" groups=["plant"]]
 collision_layer = 4
 script = ExtResource( 2 )
@@ -110,3 +114,9 @@ parameters/playback = SubResource( 7 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 13, 6 )
 shape = SubResource( 4 )
+
+[node name="Area_attacked" type="Area2D" parent="." groups=["plant"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_attacked"]
+position = Vector2( 14, 3 )
+shape = SubResource( 10 )

@@ -98,7 +98,7 @@ extents = Vector2( 21, 20 )
 [sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 30.5, 17 )
 
-[node name="lavaleft" type="StaticBody2D"]
+[node name="lavaleft" type="StaticBody2D" groups=["damage"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource( 2 )
@@ -123,7 +123,7 @@ parameters/playback = SubResource( 22 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 23 )
 
-[node name="Detector_hurt" type="Area2D" parent="."]
+[node name="Detector_hurt" type="Area2D" parent="." groups=["damage"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector_hurt"]
 position = Vector2( 0, -2 )
