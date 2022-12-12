@@ -109,7 +109,8 @@ func update_life(index):
 		life.update2(lives)
 
 func restart():
-	position=Vector2(46,91)
+	#position=Vector2(46,91)
+	position=Vector2(400,2000)
 	lives=maxlives
 	playback.travel("idle")
 
@@ -190,7 +191,9 @@ func check_is_dead():
 		
 		
 func burning(damage):
-	damage(3)
+	print(damage)
+	if damage:
+		damage(3)
 	
 	
 	

@@ -9,7 +9,7 @@ onready var detector = $Detector_hurt
 
 var apagando=false
 var timer := Timer.new()
-var damage=10
+var damage=true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -35,12 +35,11 @@ func apagandose():
 	playback.travel("Apagada")
 	timer.connect("timeout", self, "_on_timer_timeout")
 	print("meapage")
-	set_physics_process(false)
-
+	damage=false
+	print(damage)
 
 
 func _on_timer_timeout() -> void:
-	set_physics_process(true)
 	playback.travel("lava")
-	damage=10
+	damage=true
 	
