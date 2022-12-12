@@ -1,5 +1,4 @@
-extends Area2D
-
+extends Area2D 
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -14,4 +13,4 @@ func _ready():
 func _physics_process(delta):
 	for object in self.get_overlapping_areas():
 		if object.is_in_group("players") :
-			print("GANÓ PLAYER")
+			Game.show_winner=true 

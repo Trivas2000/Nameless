@@ -1,7 +1,7 @@
 extends KinematicBody2D
 export var inputindex = 1
 export var texture=1
-var SPEED=200
+var SPEED=400
 var maxlives=3
 var lives
 onready var timer = $Timer
@@ -65,9 +65,11 @@ func _physics_process(delta):
 			if (picked is Espada and  (picked.get_detector() == object)):
 				return
 			if (picked is EspadaMetal and  (picked.get_detector() == object)):
-				return
-			damage()	
-			damage(1)	
+				return 
+			if object.is_in_group("plant"):
+				damage(0.5)
+			else:
+				damage(1)	
 				
 	return 	
 		
@@ -188,7 +190,7 @@ func check_is_dead():
 		
 		
 func burning(damage):
-	damage()
+	damage(1)
 	
 	
 	
