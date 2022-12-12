@@ -15,12 +15,18 @@ _global_script_classes=[ {
 "path": "res://scene/interactive_objects/pickeable/Arms/Espada.gd"
 }, {
 "base": "Area2D",
+"class": "EspadaMetal",
+"language": "GDScript",
+"path": "res://scene/interactive_objects/pickeable/Arms/EspaldaMetal.gd"
+}, {
+"base": "Area2D",
 "class": "Hammer",
 "language": "GDScript",
 "path": "res://scene/interactive_objects/pickeable/Martillo.gd"
 } ]
 _global_script_class_icons={
 "Espada": "",
+"EspadaMetal": "",
 "Hammer": ""
 }
 

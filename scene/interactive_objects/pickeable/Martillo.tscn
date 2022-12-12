@@ -22,7 +22,7 @@ tracks/0/keys = {
 "values": [ 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Pivot/damage_detector/CollisionShape2D:disabled")
+tracks/1/path = NodePath("Pivot/damage_detector/Damage:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -50,7 +50,7 @@ tracks/0/keys = {
 "values": [ 0.0, -33.1, 91.0, 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Pivot/damage_detector/CollisionShape2D:disabled")
+tracks/1/path = NodePath("Pivot/damage_detector/Damage:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -102,7 +102,7 @@ anims/idle = SubResource( 5 )
 [node name="damage_detector" type="Area2D" parent="Pivot" groups=["Damage", "objets_to_destroy"]]
 collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/damage_detector"]
+[node name="Damage" type="CollisionShape2D" parent="Pivot/damage_detector"]
 position = Vector2( 8, -25 )
 shape = SubResource( 12 )
 disabled = true
