@@ -102,8 +102,6 @@ format = 1
 position = Vector2( 165, 165 )
 scale = Vector2( 0.5, 0.5 )
 collision_mask = 3
-speedx = 100
-accelerationX = 100
 texture = 4
 
 [node name="player2" parent="TileMap3" instance=ExtResource( 3 )]

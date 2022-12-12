@@ -2,7 +2,7 @@ extends KinematicBody2D
 export var inputindex = 1
 export var texture=1
 var SPEED=200
-var maxlives=5
+var maxlives=3
 var lives
 onready var timer = $Timer
 var canPick = true;
@@ -21,31 +21,29 @@ onready var blue_dino = preload("res://texturas/personaje/sheets/DinoSprites - d
 onready var red_dino = preload("res://texturas/personaje/sheets/DinoSprites - mort.png")
 onready var yellow_dino = preload("res://texturas/personaje/sheets/DinoSprites - tard.png")
 onready var green_dino = preload("res://texturas/personaje/sheets/DinoSprites - vita.png")
-onready var life = $"../../Life_section/Life"
-
-
-
+onready var life
 onready var anim_player= $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
-
-var debuger = true
-
-
+signal update_health_p1(health)
+signal update_health_p2(health) 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var main = get_tree().get_root().find_node("Main",true,false)
+	life=main.get_node("Life_section").get_node("Life")
 	lives=maxlives
-	life.new(lives)
+	update_life(inputindex)
 	anim_tree.active=true
 	timer.set_one_shot(true)
+	
 	if(inputindex==2):
 		texture=Game.texture_player_one
 	
 	if(inputindex==1):
 		texture=Game.texture_player_two
-	
-	if  (texture == 1):
+		
+	if(texture == 1):
 		sprite_text.set_texture(blue_dino)
 
 	elif(texture == 2):
@@ -56,18 +54,10 @@ func _ready():
 
 	else:
 		sprite_text.set_texture(green_dino)
-		
-	if debuger==true:
-		canTeletransport=true
-		
-	
-	
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	movement()
 	objects()
-	#Daño
+	
 	for object in $Detector.get_overlapping_areas():
 		if object.is_in_group("Damage") :
 			if (picked is Hammer and (picked.get_detector() == object)):
@@ -77,6 +67,7 @@ func _physics_process(delta):
 			if (picked is EspadaMetal and  (picked.get_detector() == object)):
 				return
 			damage()	
+			damage(1)	
 				
 	return 	
 		
@@ -100,16 +91,21 @@ func movement():
 				picked.set_scale(Vector2(1,1))
 			picked.global_position =pick_dino.global_position
 			
-func damage():
+func damage(dmg):
 	if playback.get_current_node()!="hurt" and timer.get_time_left()==0:		
-		print(playback.get_current_node())	
 		timer.start()
 		playback.travel("hurt")
-		lives=lives-1
+		lives=lives-dmg
 		if (lives<=0):
 			restart()
-		life.new(lives)	
-		
+		update_life(inputindex)
+			
+func update_life(index):
+	if index==1:
+		life.update1(lives)
+	else:
+		life.update2(lives)
+
 func restart():
 	position=Vector2(46,91)
 	lives=maxlives
@@ -169,7 +165,11 @@ func _use_object():
 
 	for body in $Detector.get_overlapping_bodies():
 			if body.is_in_group("objects_not_pickeable"):
-				body.use()
+				if body.name == "cofre":
+					if canPick == false and picked.name == 'red_key':
+						body.use()
+				else:
+					body.use()
 		
 
 func can_teletransport(indice):
@@ -197,27 +197,28 @@ func burning(damage):
 
 func _on_explotion_area_entered(area):
 	get_parent().get_node("explotion/AnimationPlayer").play("explotion")
+	damage(0.5)
 
 
 func _on_explotion2_area_entered(area):
 	get_parent().get_node("explotion2/AnimationPlayer").play("explotion")
-	damage()
+	damage(0.5)
 
 
 func _on_explotion3_area_entered(area):
 	get_parent().get_node("explotion3/AnimationPlayer").play("explotion")
-	damage()
+	damage(0.5)
 
 
 func _on_explotion4_area_entered(area):
 	get_parent().get_node("explotion4/AnimationPlayer").play("explotion")
-	damage()
+	damage(0.5)
 
 
 func _on_explotion5_area_entered(area):
 	get_parent().get_node("explotion5/AnimationPlayer").play("explotion")
-	damage()
+	damage(0.5)
 
 func _on_explotion6_area_entered(area):
 	get_parent().get_node("explotion6/AnimationPlayer").play("explotion")
-	damage()
+	damage(0.5)
