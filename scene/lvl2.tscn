@@ -483,10 +483,10 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 points = PoolVector2Array( 0, 0, 16, 0, 16, 8, 0, 8 )
 
 [sub_resource type="ConvexPolygonShape2D" id=87]
-points = PoolVector2Array( 2, 2, 38, 2, 38, 12, 2, 12 )
+points = PoolVector2Array( 0, 0, 40, 0, 40, 14, 0, 14 )
 
 [sub_resource type="ConvexPolygonShape2D" id=88]
-points = PoolVector2Array( 2, 2, 6, 2, 6, 42, 2, 42 )
+points = PoolVector2Array( 0, 0, 8, 0, 8, 44, 0, 44 )
 
 [sub_resource type="ConvexPolygonShape2D" id=89]
 points = PoolVector2Array( 0, 12, 4, 10, 4, 0, 28, 0, 28, 10, 30, 10, 32, 14, 32, 56, 0, 56, 0, 56 )
@@ -2283,491 +2283,74 @@ tile_data = PoolIntArray( -30736554, 16, 0, -30539944, 12, 0, -30539809, 25, 0, 
 
 [node name="LavaDown" type="Node2D" parent="."]
 
-[node name="LavaDown88" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -838, 2684 )
-
-[node name="LavaDown89" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -838, 2730 )
-
-[node name="LavaDown90" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -791, 2684 )
-
-[node name="LavaDown91" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -791, 2730 )
-
-[node name="LavaDown92" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -743, 2684 )
-
-[node name="LavaDown94" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -838, 2684 )
-
-[node name="LavaDown95" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -791, 2684 )
-
-[node name="LavaDown96" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -743, 2684 )
-
-[node name="LavaDown97" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -743, 2730 )
-
-[node name="LavaDown98" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -697, 2684 )
-
-[node name="LavaDown99" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -697, 2730 )
-
-[node name="LavaDown100" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -650, 2684 )
-
-[node name="LavaDown101" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -650, 2730 )
-
-[node name="LavaDown102" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -602, 2684 )
-
-[node name="LavaDown103" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -697, 2684 )
-
-[node name="LavaDown104" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -650, 2684 )
-
-[node name="LavaDown105" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -602, 2684 )
-
-[node name="LavaDown106" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -602, 2730 )
-
-[node name="LavaDown107" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -554, 2684 )
-
-[node name="LavaDown108" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -554, 2730 )
-
-[node name="LavaDown109" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -506, 2684 )
-
-[node name="LavaDown110" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -506, 2730 )
-
-[node name="LavaDown111" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -459, 2684 )
-
-[node name="LavaDown112" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -459, 2730 )
-
-[node name="LavaDown113" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -411, 2684 )
-
-[node name="LavaDown114" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -554, 2684 )
-
-[node name="LavaDown115" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -506, 2684 )
-
-[node name="LavaDown116" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -459, 2684 )
-
-[node name="LavaDown117" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -411, 2684 )
-
-[node name="LavaDown118" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -411, 2730 )
-
-[node name="LavaDown119" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -363, 2684 )
-
-[node name="LavaDown120" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -363, 2730 )
-
-[node name="LavaDown121" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -315, 2684 )
-
-[node name="LavaDown122" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -315, 2730 )
-
-[node name="LavaDown123" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -268, 2684 )
-
-[node name="LavaDown124" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -268, 2730 )
-
-[node name="LavaDown126" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -363, 2684 )
-
-[node name="LavaDown127" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -315, 2684 )
-
-[node name="LavaDown128" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( -268, 2684 )
-
-[node name="LavaDown173" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 543, 2684 )
-
-[node name="LavaDown177" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 543, 2684 )
-
-[node name="LavaDown178" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 543, 2730 )
-
-[node name="LavaDown179" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 591, 2684 )
-
-[node name="LavaDown180" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 591, 2730 )
-
-[node name="LavaDown181" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 639, 2684 )
-
-[node name="LavaDown182" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 639, 2730 )
-
-[node name="LavaDown183" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 686, 2684 )
-
-[node name="LavaDown184" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 686, 2730 )
-
-[node name="LavaDown185" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 734, 2684 )
-
-[node name="LavaDown186" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 591, 2684 )
-
-[node name="LavaDown187" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 639, 2684 )
-
-[node name="LavaDown188" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 686, 2684 )
-
-[node name="LavaDown189" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 734, 2684 )
-
-[node name="LavaDown190" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 734, 2730 )
-
-[node name="LavaDown191" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 779, 2684 )
-
-[node name="LavaDown192" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 779, 2684 )
-
-[node name="LavaDown193" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 779, 2730 )
-
-[node name="LavaDown194" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 827, 2684 )
-
-[node name="LavaDown195" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 827, 2730 )
-
-[node name="LavaDown196" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 875, 2684 )
-
-[node name="LavaDown197" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 875, 2730 )
-
-[node name="LavaDown198" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 922, 2684 )
-
-[node name="LavaDown199" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 922, 2730 )
-
 [node name="LavaDown200" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 970, 2684 )
-
-[node name="LavaDown201" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 827, 2684 )
-
-[node name="LavaDown202" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 875, 2684 )
-
-[node name="LavaDown203" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 922, 2684 )
+position = Vector2( 864, 2696 )
 
 [node name="LavaDown204" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 970, 2684 )
+position = Vector2( 816, 2696 )
 
 [node name="LavaDown205" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 970, 2730 )
-
-[node name="LavaDown206" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1017, 2684 )
+position = Vector2( 784, 2744 )
 
 [node name="LavaDown207" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1017, 2730 )
-
-[node name="LavaDown208" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1065, 2684 )
-
-[node name="LavaDown209" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1065, 2730 )
-
-[node name="LavaDown210" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1112, 2684 )
-
-[node name="LavaDown211" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1112, 2730 )
-
-[node name="LavaDown212" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1160, 2684 )
+position = Vector2( 952, 2744 )
 
 [node name="LavaDown213" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1017, 2684 )
+position = Vector2( 912, 2696 )
 
-[node name="LavaDown214" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1065, 2684 )
+[node name="LavaDown202" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( 2272, 2712 )
+
+[node name="LavaDown210" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( 2224, 2712 )
+
+[node name="LavaDown211" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( 2192, 2760 )
+
+[node name="LavaDown212" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( 2360, 2760 )
 
 [node name="LavaDown215" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1112, 2684 )
+position = Vector2( 2320, 2712 )
+
+[node name="LavaDown203" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( 3088, 2712 )
 
 [node name="LavaDown216" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1160, 2684 )
+position = Vector2( 3040, 2712 )
 
 [node name="LavaDown217" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1160, 2730 )
-
-[node name="LavaDown218" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1208, 2684 )
+position = Vector2( 3008, 2760 )
 
 [node name="LavaDown219" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1208, 2730 )
+position = Vector2( 3136, 2712 )
+
+[node name="LavaDown201" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( -752, 2712 )
+
+[node name="LavaDown206" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( -800, 2712 )
+
+[node name="LavaDown208" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( -832, 2760 )
+
+[node name="LavaDown209" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( -664, 2760 )
+
+[node name="LavaDown214" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( -704, 2712 )
+
+[node name="LavaDown218" parent="LavaDown" instance=ExtResource( 30 )]
+position = Vector2( -2320, 2712 )
 
 [node name="LavaDown220" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1256, 2684 )
-
-[node name="LavaDown221" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1256, 2730 )
+position = Vector2( -2368, 2712 )
 
 [node name="LavaDown222" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1303, 2684 )
+position = Vector2( -2232, 2760 )
 
 [node name="LavaDown223" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1303, 2730 )
-
-[node name="LavaDown225" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1208, 2684 )
-
-[node name="LavaDown226" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1256, 2684 )
-
-[node name="LavaDown227" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1303, 2684 )
-
-[node name="LavaDown254" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1779, 2684 )
-
-[node name="LavaDown255" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1779, 2730 )
-
-[node name="LavaDown256" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1826, 2684 )
-
-[node name="LavaDown257" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1826, 2730 )
-
-[node name="LavaDown258" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1874, 2684 )
-
-[node name="LavaDown259" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1779, 2684 )
-
-[node name="LavaDown260" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1826, 2684 )
-
-[node name="LavaDown261" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1874, 2684 )
-
-[node name="LavaDown262" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1874, 2730 )
-
-[node name="LavaDown263" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1922, 2684 )
-
-[node name="LavaDown264" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1922, 2730 )
-
-[node name="LavaDown265" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1970, 2684 )
-
-[node name="LavaDown266" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1970, 2730 )
-
-[node name="LavaDown267" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2017, 2684 )
-
-[node name="LavaDown268" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2017, 2730 )
-
-[node name="LavaDown269" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2065, 2684 )
-
-[node name="LavaDown270" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1922, 2684 )
-
-[node name="LavaDown271" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 1970, 2684 )
-
-[node name="LavaDown272" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2017, 2684 )
-
-[node name="LavaDown273" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2065, 2684 )
-
-[node name="LavaDown274" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2065, 2730 )
-
-[node name="LavaDown275" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2113, 2684 )
-
-[node name="LavaDown276" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2113, 2730 )
-
-[node name="LavaDown277" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2161, 2684 )
-
-[node name="LavaDown278" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2161, 2730 )
-
-[node name="LavaDown279" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2208, 2684 )
-
-[node name="LavaDown280" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2208, 2730 )
-
-[node name="LavaDown281" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2256, 2684 )
-
-[node name="LavaDown282" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2113, 2684 )
-
-[node name="LavaDown283" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2161, 2684 )
-
-[node name="LavaDown284" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2208, 2684 )
-
-[node name="LavaDown285" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2256, 2684 )
-
-[node name="LavaDown286" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2256, 2730 )
-
-[node name="LavaDown287" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2304, 2684 )
-
-[node name="LavaDown288" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2304, 2730 )
-
-[node name="LavaDown289" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2352, 2684 )
-
-[node name="LavaDown290" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2352, 2730 )
-
-[node name="LavaDown291" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2399, 2684 )
-
-[node name="LavaDown292" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2399, 2730 )
-
-[node name="LavaDown293" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2447, 2684 )
-
-[node name="LavaDown294" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2304, 2684 )
-
-[node name="LavaDown295" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2352, 2684 )
-
-[node name="LavaDown296" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2399, 2684 )
-
-[node name="LavaDown297" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2447, 2684 )
-
-[node name="LavaDown298" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2447, 2730 )
-
-[node name="LavaDown299" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2494, 2684 )
-
-[node name="LavaDown300" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2494, 2730 )
-
-[node name="LavaDown301" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2542, 2684 )
-
-[node name="LavaDown302" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2542, 2730 )
-
-[node name="LavaDown303" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2589, 2684 )
-
-[node name="LavaDown304" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2589, 2730 )
-
-[node name="LavaDown306" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2494, 2684 )
-
-[node name="LavaDown307" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2542, 2684 )
-
-[node name="LavaDown308" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2589, 2684 )
-
-[node name="LavaDown317" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2828, 2684 )
-
-[node name="LavaDown321" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2828, 2684 )
-
-[node name="LavaDown322" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2828, 2730 )
-
-[node name="LavaDown323" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2876, 2684 )
-
-[node name="LavaDown324" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2876, 2730 )
-
-[node name="LavaDown325" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2924, 2684 )
-
-[node name="LavaDown326" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2924, 2730 )
-
-[node name="LavaDown327" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2971, 2684 )
-
-[node name="LavaDown328" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2971, 2730 )
-
-[node name="LavaDown329" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 3019, 2684 )
-
-[node name="LavaDown330" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2876, 2684 )
-
-[node name="LavaDown331" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2924, 2684 )
-
-[node name="LavaDown332" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 2971, 2684 )
-
-[node name="LavaDown334" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 3064, 2732 )
-
-[node name="LavaDown335" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 3081, 2685 )
-
-[node name="LavaDown336" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 3081, 2657 )
-
-[node name="LavaDown341" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 3019, 2732 )
-
-[node name="LavaDown342" parent="LavaDown" instance=ExtResource( 30 )]
-position = Vector2( 3064, 2685 )
+position = Vector2( -2272, 2712 )
 
 [node name="Teletansportacion" type="Node2D" parent="."]
 
@@ -3374,16 +2957,16 @@ tile_data = PoolIntArray( -8192150, 1, 0, -8192149, 2, 0, -8192148, 1, 0, -81921
 [node name="WinAreaDetect" type="Node2D" parent="."]
 
 [node name="WinArea" parent="WinAreaDetect" instance=ExtResource( 47 )]
-position = Vector2( -2323, 2840 )
+position = Vector2( -2352, 2808 )
 
 [node name="WinArea2" parent="WinAreaDetect" instance=ExtResource( 47 )]
-position = Vector2( -786, 2836 )
+position = Vector2( -784, 2808 )
 
 [node name="WinArea3" parent="WinAreaDetect" instance=ExtResource( 47 )]
-position = Vector2( 834, 2841 )
+position = Vector2( 824, 2808 )
 
 [node name="WinArea4" parent="WinAreaDetect" instance=ExtResource( 47 )]
-position = Vector2( 2242, 2836 )
+position = Vector2( 2232, 2808 )
 
 [node name="WinArea5" parent="WinAreaDetect" instance=ExtResource( 47 )]
-position = Vector2( 3048, 2839 )
+position = Vector2( 3048, 2808 )

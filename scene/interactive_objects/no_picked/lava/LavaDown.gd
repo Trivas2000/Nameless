@@ -9,7 +9,7 @@ onready var detector = $Detector_hurt
 
 var apagando=false
 var timer := Timer.new()
-var damage=10
+var damage=true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -31,14 +31,15 @@ func detect_player ():
 
 
 func apagandose():
-	playback.travel("Apagada")
-	damage =3
 	timer.start()
+	playback.travel("Apagada")
 	timer.connect("timeout", self, "_on_timer_timeout")
-
+	print("meapage")
+	damage=false
+	print(damage)
 
 
 func _on_timer_timeout() -> void:
 	playback.travel("lava")
-	damage=10
+	damage=true
 	
