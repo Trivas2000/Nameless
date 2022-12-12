@@ -124,8 +124,7 @@ func _pick_object2():
 				_pick_object(object)
 				return 
 				 
-			
-
+				
 func _pick_object(body):
 	if (canPick == false) :
 		self.remove_child(picked)
