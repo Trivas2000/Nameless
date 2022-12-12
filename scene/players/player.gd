@@ -188,9 +188,7 @@ func check_is_dead():
 		
 		
 func burning(damage):
-	playback.travel("hurt")
-	lives = lives-damage
-	check_is_dead()
+	damage()
 	
 	
 	
