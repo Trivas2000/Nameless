@@ -128,7 +128,7 @@ graph_offset = Vector2( 9.64092, 44.8815 )
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 17, 20.25 )
 
-[node name="player" type="KinematicBody2D"]
+[node name="player" type="KinematicBody2D" groups=["players"]]
 collision_mask = 129
 script = ExtResource( 1 )
 

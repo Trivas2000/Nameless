@@ -1,7 +1,7 @@
 extends KinematicBody2D
 export var inputindex = 1
 export var texture=1
-var SPEED=400
+var SPEED=300
 var maxlives=3
 var lives
 onready var timer = $Timer
@@ -109,7 +109,8 @@ func update_life(index):
 		life.update2(lives)
 
 func restart():
-	position=Vector2(46,91)
+	#position=Vector2(46,91)
+	position=Vector2(400,2000)
 	lives=maxlives
 	playback.travel("idle")
 
@@ -190,7 +191,9 @@ func check_is_dead():
 		
 		
 func burning(damage):
-	damage(1)
+	print(damage)
+	if damage:
+		damage(3)
 	
 	
 	
