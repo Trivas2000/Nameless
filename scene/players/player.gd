@@ -29,6 +29,9 @@ onready var anim_player= $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
 
+var debuger = true
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -53,6 +56,10 @@ func _ready():
 
 	else:
 		sprite_text.set_texture(green_dino)
+		
+	if debuger==true:
+		canTeletransport=true
+		
 	
 	
 	
@@ -64,6 +71,10 @@ func _physics_process(delta):
 	for object in $Detector.get_overlapping_areas():
 		if object.is_in_group("Damage") :
 			if (picked is Hammer and (picked.get_detector() == object)):
+				return
+			if (picked is Espada and  (picked.get_detector() == object)):
+				return
+			if (picked is EspadaMetal and  (picked.get_detector() == object)):
 				return
 			damage()	
 				

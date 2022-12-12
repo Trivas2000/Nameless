@@ -68,7 +68,7 @@ margin_bottom = 575.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 962.0
-margin_bottom = 1245.0
+margin_bottom = 1921.0
 size_flags_horizontal = 3
 size_flags_vertical = 2
 alignment = 1
@@ -288,11 +288,131 @@ margin_bottom = 1165.0
 theme = ExtResource( 1 )
 custom_styles/separator = SubResource( 2 )
 
+[node name="credit_leter_title2" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1169.0
+margin_right = 962.0
+margin_bottom = 1227.0
+theme = ExtResource( 9 )
+text = "stone cemetery asset pack"
+align = 1
+autowrap = true
+
+[node name="credit_letter2" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1231.0
+margin_right = 962.0
+margin_bottom = 1280.0
+theme = ExtResource( 8 )
+text = "rowdy41.itch.io"
+align = 1
+
+[node name="HSeparator11" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1284.0
+margin_right = 962.0
+margin_bottom = 1288.0
+theme = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+
+[node name="credit_leter_title3" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1292.0
+margin_right = 962.0
+margin_bottom = 1350.0
+theme = ExtResource( 9 )
+text = "plants"
+align = 1
+autowrap = true
+
+[node name="credit_letter3" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1354.0
+margin_right = 962.0
+margin_bottom = 1403.0
+theme = ExtResource( 8 )
+text = "eevo.itch.io"
+align = 1
+
+[node name="HSeparator12" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1407.0
+margin_right = 962.0
+margin_bottom = 1411.0
+theme = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+
+[node name="credit_leter_title4" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1415.0
+margin_right = 962.0
+margin_bottom = 1534.0
+theme = ExtResource( 9 )
+text = "raven-fantasy-pixel-art-tileset-green-forest"
+align = 1
+autowrap = true
+
+[node name="credit_letter4" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1538.0
+margin_right = 962.0
+margin_bottom = 1587.0
+theme = ExtResource( 8 )
+text = "clockworkraven.itch.io"
+align = 1
+
+[node name="HSeparator13" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1591.0
+margin_right = 962.0
+margin_bottom = 1595.0
+theme = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+
+[node name="credit_leter_title5" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1599.0
+margin_right = 962.0
+margin_bottom = 1657.0
+theme = ExtResource( 9 )
+text = "pixel-art-top-down-basic"
+align = 1
+autowrap = true
+
+[node name="credit_letter5" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1661.0
+margin_right = 962.0
+margin_bottom = 1710.0
+theme = ExtResource( 8 )
+text = "cainos.itch.io"
+align = 1
+
+[node name="HSeparator14" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1714.0
+margin_right = 962.0
+margin_bottom = 1718.0
+theme = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+
+[node name="credit_leter_title6" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1722.0
+margin_right = 962.0
+margin_bottom = 1780.0
+theme = ExtResource( 9 )
+text = "mystic-woods"
+align = 1
+autowrap = true
+
+[node name="credit_letter6" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1784.0
+margin_right = 962.0
+margin_bottom = 1833.0
+theme = ExtResource( 8 )
+text = "game-endeavor.itch.io"
+align = 1
+
+[node name="HSeparator15" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1837.0
+margin_right = 962.0
+margin_bottom = 1841.0
+theme = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
 margin_left = 397.0
-margin_top = 1169.0
+margin_top = 1845.0
 margin_right = 564.0
-margin_bottom = 1245.0
+margin_bottom = 1921.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
