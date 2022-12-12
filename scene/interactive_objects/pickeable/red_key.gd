@@ -12,5 +12,5 @@ func _ready():
 
 #add an action to this object
 func use():
-	print("Apretdo la llave")
+	print("Apreto la llave")
 
