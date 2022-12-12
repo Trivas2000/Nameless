@@ -31,14 +31,16 @@ func detect_player ():
 
 
 func apagandose():
-	playback.travel("Apagada")
-	damage =3
 	timer.start()
+	playback.travel("Apagada")
 	timer.connect("timeout", self, "_on_timer_timeout")
+	print("meapage")
+	set_physics_process(false)
 
 
 
 func _on_timer_timeout() -> void:
+	set_physics_process(true)
 	playback.travel("lava")
 	damage=10
 	

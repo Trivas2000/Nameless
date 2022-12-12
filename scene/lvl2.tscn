@@ -3387,3 +3387,6 @@ position = Vector2( 2242, 2836 )
 
 [node name="WinArea5" parent="WinAreaDetect" instance=ExtResource( 47 )]
 position = Vector2( 3048, 2839 )
+
+[node name="waterContainerSpawn" parent="." instance=ExtResource( 37 )]
+position = Vector2( 864, 2600 )

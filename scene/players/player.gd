@@ -1,7 +1,7 @@
 extends KinematicBody2D
 export var inputindex = 1
 export var texture=1
-var SPEED=400
+var SPEED=300
 var maxlives=3
 var lives
 onready var timer = $Timer
@@ -190,7 +190,7 @@ func check_is_dead():
 		
 		
 func burning(damage):
-	damage(1)
+	damage(3)
 	
 	
 	
