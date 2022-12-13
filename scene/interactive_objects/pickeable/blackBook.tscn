@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scene/interactive_objects/pickeable/blackBook.gd" type="Script" id=1]
 [ext_resource path="res://texturas/object/books/book_06f.png" type="Texture" id=2]
+[ext_resource path="res://dialogues/dialogo_apertura_cofre.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=3]
 height = 0.0
@@ -26,3 +27,6 @@ shape = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
 shape = SubResource( 2 )
+
+[node name="Area2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 11, -25 )

@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "Hammer",
 "language": "GDScript",
 "path": "res://scene/interactive_objects/pickeable/Martillo.gd"
+}, {
+"base": "StaticBody2D",
+"class": "button_door",
+"language": "GDScript",
+"path": "res://scene/button_door.gd"
 } ]
 _global_script_class_icons={
 "Espada": "",
 "EspadaMetal": "",
-"Hammer": ""
+"Hammer": "",
+"button_door": ""
 }
 
 [application]

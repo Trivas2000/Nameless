@@ -32,7 +32,7 @@ signal update_health_p2(health)
 func _ready():
 	var main = get_tree().get_root().find_node("Main",true,false)
 	life=main.get_node("Life_section").get_node("Life")
-	lives=maxlives
+	lives=maxlives 
 	update_life(inputindex)
 	anim_tree.active=true
 	timer.set_one_shot(true)
@@ -54,6 +54,7 @@ func _ready():
 
 	else:
 		sprite_text.set_texture(green_dino)
+		
 func _physics_process(delta):
 	movement()
 	objects()
@@ -70,6 +71,11 @@ func _physics_process(delta):
 				damage(0.5)
 			else:
 				damage(1)	
+				
+		if object.is_in_group("enemy") :
+			damage(0.5)
+		
+			
 				
 	return 	
 		
@@ -171,6 +177,7 @@ func _use_object():
 				if body.name == "cofre":
 					if canPick == false and picked.name == 'red_key':
 						body.use()
+						
 				else:
 					body.use()
 		
@@ -193,37 +200,33 @@ func check_is_dead():
 func burning(damage):
 	print(damage)
 	if damage:
-		damage(3)
+		damage(6)
 	
 	
-	
-	
-
 
 func _on_explotion_area_entered(area):
-	get_parent().get_node("explotion/AnimationPlayer").play("explotion")
-	damage(0.5)
+	get_parent().get_node("explotions/explotion/AnimationPlayer").play("explotion")
 
 
 func _on_explotion2_area_entered(area):
-	get_parent().get_node("explotion2/AnimationPlayer").play("explotion")
-	damage(0.5)
+	get_parent().get_node("explotions/explotion2/AnimationPlayer").play("explotion")
+	
 
 
 func _on_explotion3_area_entered(area):
-	get_parent().get_node("explotion3/AnimationPlayer").play("explotion")
-	damage(0.5)
+	get_parent().get_node("explotions/explotion3/AnimationPlayer").play("explotion")
+
 
 
 func _on_explotion4_area_entered(area):
-	get_parent().get_node("explotion4/AnimationPlayer").play("explotion")
-	damage(0.5)
+	get_parent().get_node("explotions/explotion4/AnimationPlayer").play("explotion")
+	
 
 
 func _on_explotion5_area_entered(area):
-	get_parent().get_node("explotion5/AnimationPlayer").play("explotion")
-	damage(0.5)
+	get_parent().get_node("explotions/explotion5/AnimationPlayer").play("explotion")
+
 
 func _on_explotion6_area_entered(area):
-	get_parent().get_node("explotion6/AnimationPlayer").play("explotion")
-	damage(0.5)
+	get_parent().get_node("explotions/explotion6/AnimationPlayer").play("explotion")
+	
