@@ -539,326 +539,6 @@ tile_data = PoolIntArray( -851975, 0, 0, -851974, 0, 0, -851973, 0, 0, -786441, 
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="TileMap3" type="TileMap" parent="."]
-tile_set = SubResource( 8 )
-cell_size = Vector2( 16, 16 )
-cell_tile_origin = 1
-cell_y_sort = true
-collision_layer = 2
-collision_mask = 0
-format = 1
-
-[node name="player" parent="TileMap3" instance=ExtResource( 1 )]
-position = Vector2( 18, 91 )
-collision_mask = 3
-inputindex = 1
-texture = 4
-
-[node name="player2" parent="TileMap3" instance=ExtResource( 4 )]
-position = Vector2( 155, 93 )
-collision_mask = 3
-inputindex = 2
-texture = 1
-
-[node name="helpers" type="Node2D" parent="TileMap3"]
-
-[node name="text_explotion" type="Area2D" parent="TileMap3/helpers"]
-position = Vector2( 211, 830 )
-script = ExtResource( 22 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap3/helpers/text_explotion"]
-position = Vector2( -11, 26 )
-shape = SubResource( 20 )
-
-[node name="Sprite" type="Sprite" parent="TileMap3/helpers/text_explotion"]
-position = Vector2( -10, 26 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 20 )
-
-[node name="Sprite2" type="Sprite" parent="TileMap3/helpers/text_explotion"]
-position = Vector2( 4, -5 )
-scale = Vector2( 0.6, 1 )
-texture = ExtResource( 23 )
-
-[node name="Label" type="Label" parent="TileMap3/helpers/text_explotion/Sprite2"]
-margin_left = -78.3333
-margin_top = -11.0
-margin_right = 1684.67
-margin_bottom = 222.0
-rect_scale = Vector2( 0.09, 0.09 )
-theme = ExtResource( 21 )
-text = "Caution! some 
-floors may be explosive"
-align = 1
-
-[node name="dialogo_inicial" parent="TileMap3/helpers" instance=ExtResource( 27 )]
-position = Vector2( 94, 57 )
-
-[node name="hammer_dialogue" parent="TileMap3/helpers" instance=ExtResource( 7 )]
-position = Vector2( 144, 257 )
-
-[node name="find_red_gem" parent="TileMap3/helpers" instance=ExtResource( 28 )]
-position = Vector2( 300, 471 )
-
-[node name="explotions" type="Node2D" parent="TileMap3"]
-
-[node name="explotion" parent="TileMap3/explotions" instance=ExtResource( 17 )]
-position = Vector2( 367, 991 )
-
-[node name="explotion2" parent="TileMap3/explotions" instance=ExtResource( 17 )]
-position = Vector2( 495, 863 )
-
-[node name="explotion3" parent="TileMap3/explotions" instance=ExtResource( 17 )]
-position = Vector2( 624, 865 )
-
-[node name="explotion4" parent="TileMap3/explotions" instance=ExtResource( 17 )]
-position = Vector2( 752, 990 )
-
-[node name="explotion5" parent="TileMap3/explotions" instance=ExtResource( 17 )]
-position = Vector2( 879, 864 )
-
-[node name="explotion6" parent="TileMap3/explotions" instance=ExtResource( 17 )]
-position = Vector2( 1007, 862 )
-
-[node name="TileMap4" type="TileMap" parent="."]
-position = Vector2( 14, -46 )
-tile_set = SubResource( 19 )
-cell_size = Vector2( 16, 16 )
-centered_textures = true
-format = 1
-tile_data = PoolIntArray( -2948904, 0, 0, -2948902, 0, 0, -2948900, 0, 0, -2817832, 0, 0, -2817830, 0, 0, -2817828, 0, 0, -2686760, 0, 0, -2686758, 0, 0, -2686756, 0, 0, 720892, 2, 0, 2097132, 0, 0, 2097134, 0, 0, 2097136, 0, 0, 2228204, 0, 0, 2228206, 0, 0, 2228208, 0, 0, 2359276, 0, 0, 2359278, 0, 0, 2359280, 0, 0 )
-
-[node name="spawner" parent="." instance=ExtResource( 12 )]
-position = Vector2( 48, 1046 )
-scene = ExtResource( 13 )
-
-[node name="spawner2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 88, 966 )
-scene = ExtResource( 13 )
-
-[node name="spawner3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 134, 874 )
-scene = ExtResource( 13 )
-
-[node name="detectorLaser" parent="." instance=ExtResource( 14 )]
-position = Vector2( 88, 336 )
-collision_layer = 1
-collision_mask = 1
-
-[node name="martillo" parent="." instance=ExtResource( 15 )]
-position = Vector2( 299, 542 )
-
-[node name="enemy" parent="." instance=ExtResource( 19 )]
-position = Vector2( 1097, 697 )
-
-[node name="Enemy2Body" parent="." instance=ExtResource( 18 )]
-position = Vector2( 1420, 391 )
-
-[node name="Enemy2Body2" parent="." instance=ExtResource( 18 )]
-position = Vector2( 390, 699 )
-
-[node name="red_key" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1455, -726 )
-
-[node name="cofre" parent="." instance=ExtResource( 11 )]
-position = Vector2( 65, -95 )
-
-[node name="pared_destruible" type="Node2D" parent="."]
-
-[node name="yellow_wall" parent="pared_destruible" instance=ExtResource( 24 )]
-position = Vector2( 1784, 791 )
-
-[node name="yellow_wall2" parent="pared_destruible" instance=ExtResource( 24 )]
-position = Vector2( 1784, 807 )
-
-[node name="yellow_wall3" parent="pared_destruible" instance=ExtResource( 24 )]
-position = Vector2( 1784, 823 )
-
-[node name="StaticBody2D" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1800, 792 )
-
-[node name="StaticBody2D2" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1800, 808 )
-
-[node name="StaticBody2D3" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1800, 824 )
-
-[node name="StaticBody2D4" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1816, 792 )
-
-[node name="StaticBody2D5" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1816, 808 )
-
-[node name="StaticBody2D6" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1816, 824 )
-
-[node name="StaticBody2D7" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1832, 792 )
-
-[node name="StaticBody2D8" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1832, 808 )
-
-[node name="StaticBody2D9" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1832, 824 )
-
-[node name="StaticBody2D10" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1846, 792 )
-
-[node name="StaticBody2D11" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1846, 808 )
-
-[node name="StaticBody2D12" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1846, 824 )
-
-[node name="StaticBody2D13" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1862, 792 )
-
-[node name="StaticBody2D14" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1862, 808 )
-
-[node name="StaticBody2D15" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1862, 824 )
-
-[node name="StaticBody2D16" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1878, 792 )
-
-[node name="StaticBody2D17" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1878, 808 )
-
-[node name="StaticBody2D18" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1878, 824 )
-
-[node name="StaticBody2D19" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1893, 792 )
-
-[node name="StaticBody2D20" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1893, 808 )
-
-[node name="StaticBody2D21" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1893, 824 )
-
-[node name="StaticBody2D22" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1909, 792 )
-
-[node name="StaticBody2D23" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1909, 808 )
-
-[node name="StaticBody2D24" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1909, 824 )
-
-[node name="StaticBody2D25" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1925, 792 )
-
-[node name="StaticBody2D26" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1925, 808 )
-
-[node name="StaticBody2D27" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1925, 824 )
-
-[node name="StaticBody2D28" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1939, 792 )
-
-[node name="StaticBody2D29" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1939, 808 )
-
-[node name="StaticBody2D30" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1939, 824 )
-
-[node name="StaticBody2D31" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1955, 792 )
-
-[node name="StaticBody2D32" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1955, 808 )
-
-[node name="StaticBody2D33" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1955, 824 )
-
-[node name="StaticBody2D34" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1971, 792 )
-
-[node name="StaticBody2D35" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1971, 808 )
-
-[node name="StaticBody2D36" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1971, 824 )
-
-[node name="StaticBody2D37" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1986, 792 )
-
-[node name="StaticBody2D38" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1986, 808 )
-
-[node name="StaticBody2D39" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 1986, 824 )
-
-[node name="StaticBody2D40" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2002, 792 )
-
-[node name="StaticBody2D41" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2002, 808 )
-
-[node name="StaticBody2D42" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2002, 824 )
-
-[node name="StaticBody2D43" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2018, 792 )
-
-[node name="StaticBody2D44" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2018, 808 )
-
-[node name="StaticBody2D45" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2018, 824 )
-
-[node name="StaticBody2D46" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2032, 792 )
-
-[node name="StaticBody2D47" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2032, 808 )
-
-[node name="StaticBody2D48" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2032, 824 )
-
-[node name="StaticBody2D49" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2048, 792 )
-
-[node name="StaticBody2D50" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2048, 808 )
-
-[node name="StaticBody2D51" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2048, 824 )
-
-[node name="StaticBody2D52" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2064, 792 )
-
-[node name="StaticBody2D53" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2064, 808 )
-
-[node name="StaticBody2D54" parent="pared_destruible" instance=ExtResource( 25 )]
-position = Vector2( 2064, 824 )
-
-[node name="Door" parent="." instance=ExtResource( 5 )]
-position = Vector2( 88, 297 )
-
-[node name="button_door" type="StaticBody2D" parent="."]
-position = Vector2( 1875, -254 )
-script = ExtResource( 26 )
-
-[node name="Sprite" type="Sprite" parent="button_door"]
-scale = Vector2( 2, 2 )
-texture = SubResource( 22 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="button_door"]
-shape = SubResource( 23 )
-
-[node name="detector" type="Area2D" parent="button_door"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="button_door/detector"]
-position = Vector2( -1, 0 )
-shape = SubResource( 24 )
-
-[node name="Area2D" parent="." instance=ExtResource( 29 )]
-position = Vector2( 1669, 796 )
-
 [node name="pared_falsa_2" type="Node2D" parent="."]
 
 [node name="yellow_wall" parent="pared_falsa_2" instance=ExtResource( 24 )]
@@ -1112,6 +792,336 @@ position = Vector2( 1751, -21 )
 
 [node name="StaticBody2D72" parent="pared_falsa_2" instance=ExtResource( 25 )]
 position = Vector2( 1767, -21 )
+
+[node name="pared_destruible" type="Node2D" parent="."]
+
+[node name="yellow_wall" parent="pared_destruible" instance=ExtResource( 24 )]
+position = Vector2( 1784, 791 )
+
+[node name="yellow_wall2" parent="pared_destruible" instance=ExtResource( 24 )]
+position = Vector2( 1784, 807 )
+
+[node name="yellow_wall3" parent="pared_destruible" instance=ExtResource( 24 )]
+position = Vector2( 1784, 823 )
+
+[node name="StaticBody2D" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1800, 792 )
+
+[node name="StaticBody2D2" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1800, 808 )
+
+[node name="StaticBody2D3" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1800, 824 )
+
+[node name="StaticBody2D4" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1816, 792 )
+
+[node name="StaticBody2D5" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1816, 808 )
+
+[node name="StaticBody2D6" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1816, 824 )
+
+[node name="StaticBody2D7" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1832, 792 )
+
+[node name="StaticBody2D8" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1832, 808 )
+
+[node name="StaticBody2D9" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1832, 824 )
+
+[node name="StaticBody2D10" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1846, 792 )
+
+[node name="StaticBody2D11" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1846, 808 )
+
+[node name="StaticBody2D12" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1846, 824 )
+
+[node name="StaticBody2D13" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1862, 792 )
+
+[node name="StaticBody2D14" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1862, 808 )
+
+[node name="StaticBody2D15" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1862, 824 )
+
+[node name="StaticBody2D16" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1878, 792 )
+
+[node name="StaticBody2D17" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1878, 808 )
+
+[node name="StaticBody2D18" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1878, 824 )
+
+[node name="StaticBody2D19" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1893, 792 )
+
+[node name="StaticBody2D20" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1893, 808 )
+
+[node name="StaticBody2D21" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1893, 824 )
+
+[node name="StaticBody2D22" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1909, 792 )
+
+[node name="StaticBody2D23" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1909, 808 )
+
+[node name="StaticBody2D24" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1909, 824 )
+
+[node name="StaticBody2D25" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1925, 792 )
+
+[node name="StaticBody2D26" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1925, 808 )
+
+[node name="StaticBody2D27" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1925, 824 )
+
+[node name="StaticBody2D28" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1939, 792 )
+
+[node name="StaticBody2D29" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1939, 808 )
+
+[node name="StaticBody2D30" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1939, 824 )
+
+[node name="StaticBody2D31" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1955, 792 )
+
+[node name="StaticBody2D32" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1955, 808 )
+
+[node name="StaticBody2D33" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1955, 824 )
+
+[node name="StaticBody2D34" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1971, 792 )
+
+[node name="StaticBody2D35" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1971, 808 )
+
+[node name="StaticBody2D36" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1971, 824 )
+
+[node name="StaticBody2D37" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1986, 792 )
+
+[node name="StaticBody2D38" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1986, 808 )
+
+[node name="StaticBody2D39" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 1986, 824 )
+
+[node name="StaticBody2D40" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2002, 792 )
+
+[node name="StaticBody2D41" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2002, 808 )
+
+[node name="StaticBody2D42" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2002, 824 )
+
+[node name="StaticBody2D43" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2018, 792 )
+
+[node name="StaticBody2D44" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2018, 808 )
+
+[node name="StaticBody2D45" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2018, 824 )
+
+[node name="StaticBody2D46" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2032, 792 )
+
+[node name="StaticBody2D47" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2032, 808 )
+
+[node name="StaticBody2D48" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2032, 824 )
+
+[node name="StaticBody2D49" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2048, 792 )
+
+[node name="StaticBody2D50" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2048, 808 )
+
+[node name="StaticBody2D51" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2048, 824 )
+
+[node name="StaticBody2D52" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2064, 792 )
+
+[node name="StaticBody2D53" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2064, 808 )
+
+[node name="StaticBody2D54" parent="pared_destruible" instance=ExtResource( 25 )]
+position = Vector2( 2064, 824 )
+
+[node name="TileMap3" type="TileMap" parent="."]
+tile_set = SubResource( 8 )
+cell_size = Vector2( 16, 16 )
+cell_tile_origin = 1
+cell_y_sort = true
+collision_layer = 2
+collision_mask = 0
+format = 1
+
+[node name="player" parent="TileMap3" instance=ExtResource( 1 )]
+position = Vector2( 18, 91 )
+collision_mask = 3
+texture = 4
+
+[node name="player2" parent="TileMap3" instance=ExtResource( 4 )]
+position = Vector2( 155, 93 )
+collision_mask = 3
+inputindex = 2
+
+[node name="helpers" type="Node2D" parent="TileMap3"]
+
+[node name="text_explotion" type="Area2D" parent="TileMap3/helpers"]
+position = Vector2( 211, 830 )
+script = ExtResource( 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap3/helpers/text_explotion"]
+position = Vector2( -11, 26 )
+shape = SubResource( 20 )
+
+[node name="Sprite" type="Sprite" parent="TileMap3/helpers/text_explotion"]
+position = Vector2( -10, 26 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 20 )
+
+[node name="Sprite2" type="Sprite" parent="TileMap3/helpers/text_explotion"]
+position = Vector2( 4, -5 )
+scale = Vector2( 0.6, 1 )
+texture = ExtResource( 23 )
+
+[node name="Label" type="Label" parent="TileMap3/helpers/text_explotion/Sprite2"]
+margin_left = -78.3333
+margin_top = -11.0
+margin_right = 1684.67
+margin_bottom = 222.0
+rect_scale = Vector2( 0.09, 0.09 )
+theme = ExtResource( 21 )
+text = "Caution! some 
+floors may be explosive"
+align = 1
+
+[node name="dialogo_inicial" parent="TileMap3/helpers" instance=ExtResource( 27 )]
+position = Vector2( 94, 57 )
+
+[node name="hammer_dialogue" parent="TileMap3/helpers" instance=ExtResource( 7 )]
+position = Vector2( 144, 257 )
+
+[node name="find_red_gem" parent="TileMap3/helpers" instance=ExtResource( 28 )]
+position = Vector2( 300, 471 )
+
+[node name="explotions" type="Node2D" parent="TileMap3"]
+
+[node name="explotion" parent="TileMap3/explotions" instance=ExtResource( 17 )]
+position = Vector2( 367, 991 )
+
+[node name="explotion2" parent="TileMap3/explotions" instance=ExtResource( 17 )]
+position = Vector2( 495, 863 )
+
+[node name="explotion3" parent="TileMap3/explotions" instance=ExtResource( 17 )]
+position = Vector2( 624, 865 )
+
+[node name="explotion4" parent="TileMap3/explotions" instance=ExtResource( 17 )]
+position = Vector2( 752, 990 )
+
+[node name="explotion5" parent="TileMap3/explotions" instance=ExtResource( 17 )]
+position = Vector2( 879, 864 )
+
+[node name="explotion6" parent="TileMap3/explotions" instance=ExtResource( 17 )]
+position = Vector2( 1007, 862 )
+
+[node name="TileMap4" type="TileMap" parent="."]
+position = Vector2( 14, -46 )
+tile_set = SubResource( 19 )
+cell_size = Vector2( 16, 16 )
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( -2948904, 0, 0, -2948902, 0, 0, -2948900, 0, 0, -2817832, 0, 0, -2817830, 0, 0, -2817828, 0, 0, -2686760, 0, 0, -2686758, 0, 0, -2686756, 0, 0, 720892, 2, 0, 2097132, 0, 0, 2097134, 0, 0, 2097136, 0, 0, 2228204, 0, 0, 2228206, 0, 0, 2228208, 0, 0, 2359276, 0, 0, 2359278, 0, 0, 2359280, 0, 0 )
+
+[node name="spawner" parent="." instance=ExtResource( 12 )]
+position = Vector2( 48, 1046 )
+scene = ExtResource( 13 )
+
+[node name="spawner2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 88, 966 )
+scene = ExtResource( 13 )
+
+[node name="spawner3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 134, 874 )
+scene = ExtResource( 13 )
+
+[node name="detectorLaser" parent="." instance=ExtResource( 14 )]
+position = Vector2( 88, 336 )
+collision_layer = 1
+collision_mask = 1
+
+[node name="martillo" parent="." instance=ExtResource( 15 )]
+position = Vector2( 299, 542 )
+
+[node name="enemy" parent="." instance=ExtResource( 19 )]
+position = Vector2( 1097, 697 )
+
+[node name="Enemy2Body" parent="." instance=ExtResource( 18 )]
+position = Vector2( 1420, 391 )
+
+[node name="Enemy2Body2" parent="." instance=ExtResource( 18 )]
+position = Vector2( 390, 699 )
+
+[node name="red_key" parent="." instance=ExtResource( 8 )]
+position = Vector2( 70, -308 )
+
+[node name="yellow_wall" parent="red_key" instance=ExtResource( 24 )]
+position = Vector2( 1362, -324 )
+
+[node name="yellow_wall2" parent="red_key" instance=ExtResource( 24 )]
+position = Vector2( 1377, -324 )
+
+[node name="yellow_wall3" parent="red_key" instance=ExtResource( 24 )]
+position = Vector2( 1397, -324 )
+
+[node name="yellow_wall4" parent="red_key" instance=ExtResource( 24 )]
+position = Vector2( 1412, -324 )
+
+[node name="cofre" parent="." instance=ExtResource( 11 )]
+position = Vector2( 65, -95 )
+
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 88, 297 )
+
+[node name="button_door" type="StaticBody2D" parent="."]
+position = Vector2( 1875, -254 )
+script = ExtResource( 26 )
+
+[node name="Sprite" type="Sprite" parent="button_door"]
+scale = Vector2( 2, 2 )
+texture = SubResource( 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button_door"]
+shape = SubResource( 23 )
+
+[node name="detector" type="Area2D" parent="button_door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button_door/detector"]
+position = Vector2( -1, 0 )
+shape = SubResource( 24 )
+
+[node name="Area2D" parent="." instance=ExtResource( 29 )]
+position = Vector2( 1669, 796 )
 
 [connection signal="area_entered" from="TileMap3/explotions/explotion" to="TileMap3/player" method="_on_explotion_area_entered"]
 [connection signal="area_entered" from="TileMap3/explotions/explotion" to="TileMap3/player2" method="_on_explotion_area_entered"]

@@ -68,7 +68,7 @@ margin_bottom = 575.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 962.0
-margin_bottom = 1921.0
+margin_bottom = 2597.0
 size_flags_horizontal = 3
 size_flags_vertical = 2
 alignment = 1
@@ -408,11 +408,131 @@ margin_bottom = 1841.0
 theme = ExtResource( 1 )
 custom_styles/separator = SubResource( 2 )
 
+[node name="credit_leter_title7" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1845.0
+margin_right = 962.0
+margin_bottom = 1903.0
+theme = ExtResource( 9 )
+text = "stone-cemetery-asset-pack"
+align = 1
+autowrap = true
+
+[node name="credit_letter7" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1907.0
+margin_right = 962.0
+margin_bottom = 1956.0
+theme = ExtResource( 8 )
+text = "rowdy41.itch.io"
+align = 1
+
+[node name="HSeparator16" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1960.0
+margin_right = 962.0
+margin_bottom = 1964.0
+theme = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+
+[node name="credit_leter_title8" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1968.0
+margin_right = 962.0
+margin_bottom = 2026.0
+theme = ExtResource( 9 )
+text = "dungeontileset-ii"
+align = 1
+autowrap = true
+
+[node name="credit_letter8" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2030.0
+margin_right = 962.0
+margin_bottom = 2079.0
+theme = ExtResource( 8 )
+text = "0x72.itch.io"
+align = 1
+
+[node name="HSeparator17" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2083.0
+margin_right = 962.0
+margin_bottom = 2087.0
+theme = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+
+[node name="credit_leter_title9" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2091.0
+margin_right = 962.0
+margin_bottom = 2149.0
+theme = ExtResource( 9 )
+text = "pixelart-effect-pack"
+align = 1
+autowrap = true
+
+[node name="credit_letter9" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2153.0
+margin_right = 962.0
+margin_bottom = 2202.0
+theme = ExtResource( 8 )
+text = "codemanu.itch.io"
+align = 1
+
+[node name="HSeparator18" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2206.0
+margin_right = 962.0
+margin_bottom = 2210.0
+theme = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+
+[node name="credit_leter_title10" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2214.0
+margin_right = 962.0
+margin_bottom = 2272.0
+theme = ExtResource( 9 )
+text = "16x16-dungeon-tileset"
+align = 1
+autowrap = true
+
+[node name="credit_letter10" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2276.0
+margin_right = 962.0
+margin_bottom = 2325.0
+theme = ExtResource( 8 )
+text = "0x72.itch.io"
+align = 1
+
+[node name="HSeparator19" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2329.0
+margin_right = 962.0
+margin_bottom = 2333.0
+theme = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+
+[node name="credit_leter_title11" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2337.0
+margin_right = 962.0
+margin_bottom = 2456.0
+theme = ExtResource( 9 )
+text = "gif-free-pixel-effects-pack-6-forks-of-flame"
+align = 1
+autowrap = true
+
+[node name="credit_letter11" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2460.0
+margin_right = 962.0
+margin_bottom = 2509.0
+theme = ExtResource( 8 )
+text = "xyezawr.itch.io"
+align = 1
+
+[node name="HSeparator20" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2513.0
+margin_right = 962.0
+margin_bottom = 2517.0
+theme = ExtResource( 1 )
+custom_styles/separator = SubResource( 2 )
+
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
 margin_left = 397.0
-margin_top = 1845.0
+margin_top = 2521.0
 margin_right = 564.0
-margin_bottom = 1921.0
+margin_bottom = 2597.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1

@@ -131,8 +131,6 @@ extents = Vector2( 17, 20.25 )
 [node name="player" type="KinematicBody2D" groups=["players"]]
 collision_mask = 129
 script = ExtResource( 1 )
-inputindex = null
-texture = null
 
 [node name="Pivot" type="Node2D" parent="."]
 scale = Vector2( 0.5, 0.5 )

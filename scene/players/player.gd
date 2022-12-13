@@ -119,8 +119,8 @@ func update_life(index):
 		life.update2(lives)
 
 func restart():
-	#position=Vector2(46,91)
-	position=Vector2(400,2000)
+	position=Vector2(46,91)
+	#position=Vector2(400,2000)
 	lives=maxlives
 	playback.travel("idle")
 

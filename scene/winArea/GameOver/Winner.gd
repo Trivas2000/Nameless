@@ -25,6 +25,4 @@ func on_main_menu_pressed():
 	get_tree().change_scene("res://scene/menu_scenes/menu.tscn")
 	
 func on_exit_pressed():
-	get_tree().quit()
-	
-	
+	pass
