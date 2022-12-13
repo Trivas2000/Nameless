@@ -23,7 +23,7 @@ func _on_body_entered(body):
 	
 func _on_body_exited(body):
 	if body.name == 'player'or body.name == 'player2':
-		active = true
+		active = false
 		if Game.door_first_level == true:
 			true_men = true
 			active = false
