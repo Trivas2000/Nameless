@@ -22,19 +22,19 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 28.1, -27 )
-scale = Vector2( 0.907955, 1.91667 )
+position = Vector2( -4, -30 )
+scale = Vector2( 0.726137, 1.91667 )
 texture = ExtResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 87, -8 )
+position = Vector2( 46, -14 )
 texture = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -45.0
-margin_top = -49.0
-margin_right = 1584.0
-margin_bottom = 420.0
+margin_left = -60.0
+margin_top = -56.0
+margin_right = 1140.0
+margin_bottom = 639.0
 rect_scale = Vector2( 0.09, 0.09 )
 theme = ExtResource( 1 )
 custom_colors/font_color = Color( 0.215686, 0.227451, 0.211765, 1 )

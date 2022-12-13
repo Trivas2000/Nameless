@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://resources/info.tres" type="Theme" id=1]
+[ext_resource path="res://dialogues/dialogo.gd" type="Script" id=2]
+[ext_resource path="res://texturas/Texturas/helper.tres" type="Texture" id=3]
+[ext_resource path="res://texturas/botones/dialog box big.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 24.1868
+
+[node name="dialogo_inicial" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -11, 26 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -10, 26 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -8, -26 )
+scale = Vector2( 0.8, 1.5 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Sprite2"]
+margin_left = -67.5
+margin_top = -14.0
+margin_right = 1695.5
+margin_bottom = 337.0
+rect_scale = Vector2( 0.08, 0.08 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.431373, 0.631373, 0.317647, 1 )
+text = "to start you should look for the key that opens the chest."
+align = 1
+autowrap = true

@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://resources/info.tres" type="Theme" id=1]
+[ext_resource path="res://texturas/Texturas/helper.tres" type="Texture" id=2]
+[ext_resource path="res://texturas/botones/dialog box big.png" type="Texture" id=3]
+[ext_resource path="res://dialogues/hammer_dialogo.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 24.1868
+
+[node name="hammer_dialogue" type="Area2D"]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -11, 26 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -10, 26 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="door_open" type="Sprite" parent="."]
+position = Vector2( -6, -36 )
+scale = Vector2( 0.8, 1.7 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="door_open"]
+margin_left = -76.25
+margin_top = -14.7059
+margin_right = 1686.75
+margin_bottom = 454.294
+rect_scale = Vector2( 0.09, 0.06 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.180392, 0.682353, 0.815686, 1 )
+text = "You should look for a hammer that will allow you to advance to the next level"
+align = 1
+autowrap = true
+
+[node name="door_close" type="Sprite" parent="."]
+position = Vector2( -6, -36 )
+scale = Vector2( 0.8, 1.7 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="door_close"]
+margin_left = -77.5
+margin_top = -7.64706
+margin_right = 1685.5
+margin_bottom = 461.353
+rect_scale = Vector2( 0.09, 0.06 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.180392, 0.682353, 0.815686, 1 )
+text = "Open the door for more instructions"
+align = 1
+autowrap = true

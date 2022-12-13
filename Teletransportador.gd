@@ -12,5 +12,5 @@ func _physics_process(delta):
 	pass
 	
 func use(player):
-	player.global_position=Vector2(-1340, -1220)
-
+	
+	player.position=Vector2(-1354, -1203)

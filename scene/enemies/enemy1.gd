@@ -17,6 +17,9 @@ func _process(delta):
 		direction *= -1
 		value *=-1
 		pivot.set_scale(Vector2(value,2.5))
+	
+	
+	
 		
 	
 	

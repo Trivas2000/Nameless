@@ -39,9 +39,9 @@ resource_name = "idle"
 length = 0.001
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 4, 10 )
+extents = Vector2( 6.08333, 8.66667 )
 
-[node name="explotion" type="Area2D" groups=["explotion"]]
+[node name="explotion" type="Area2D" groups=["Damage", "explotion"]]
 collision_layer = 16
 script = ExtResource( 2 )
 
@@ -62,6 +62,6 @@ frame = 71
 region_rect = Rect2( 0, 0, 1017.11, 736.771 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 4, 0 )
+position = Vector2( 0, -0.999999 )
 scale = Vector2( 6, 6 )
 shape = SubResource( 4 )
