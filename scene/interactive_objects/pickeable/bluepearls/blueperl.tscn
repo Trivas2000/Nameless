@@ -9,7 +9,7 @@ radius = 3.0
 [sub_resource type="CircleShape2D" id=2]
 radius = 9.05539
 
-[node name="blueperl" type="RigidBody2D" groups=["restituible"]]
+[node name="blueperl" type="RigidBody2D" groups=["picked_by"]]
 collision_layer = 4
 collision_mask = 0
 mass = 0.00102041

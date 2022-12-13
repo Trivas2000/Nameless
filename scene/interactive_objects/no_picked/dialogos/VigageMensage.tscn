@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://resources/info.tres" type="Theme" id=1]
+[ext_resource path="res://texturas/Texturas/helper.tres" type="Texture" id=2]
+[ext_resource path="res://texturas/botones/dialog box big.png" type="Texture" id=3]
+[ext_resource path="res://scene/interactive_objects/no_picked/dialogos/VigageMensage.gd" type="Script" id=4]
+[ext_resource path="res://texturas/object/pearl/pearl_01b.png" type="Texture" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 24.1868
+
+[node name="VigageMensage" type="Area2D"]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -11, 26 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -10, 26 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 28.1, -27 )
+scale = Vector2( 0.907955, 1.91667 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 87, -8 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -45.0
+margin_top = -49.0
+margin_right = 1584.0
+margin_bottom = 420.0
+rect_scale = Vector2( 0.09, 0.09 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.215686, 0.227451, 0.211765, 1 )
+custom_colors/font_outline_modulate = Color( 0.00392157, 0, 0, 1 )
+custom_constants/line_spacing = 1
+text = "Find and use the 3 blue pearls in these homes to learn how to teleport."
+align = 1
+autowrap = true
