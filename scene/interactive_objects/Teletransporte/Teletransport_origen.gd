@@ -1,17 +1,14 @@
 extends Area2D
-# posicion es (-1409, 1807)
-
-
-
+# posicion es
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	print(global_position)
+	
 	
 func _physics_process(delta):
 	pass
 	
-func use(player):
-	
-	player.position=Vector2(-1354, -1198)
+func use(player): 
+	player.global_position=Vector2(46,91)
 
