@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://resources/info.tres" type="Theme" id=1]
+[ext_resource path="res://texturas/botones/dialog box big.png" type="Texture" id=2]
+[ext_resource path="res://texturas/Texturas/spritesheet_48x48.png" type="Texture" id=3]
+[ext_resource path="res://dialogues/end_level_one.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 24.3311
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 47.1831, 380.695, 47.3389, 50.2834 )
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, 0 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.5, 0.5 )
+texture = SubResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -5, -51 )
+scale = Vector2( 0.8, 1.5 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Sprite2"]
+margin_left = -67.5
+margin_top = -14.0
+margin_right = 1695.5
+margin_bottom = 337.0
+rect_scale = Vector2( 0.08, 0.08 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.117647, 0.756863, 0.380392, 1 )
+text = "Break the wall with the hammer to pass to the next level."
+align = 1
+autowrap = true
