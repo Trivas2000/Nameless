@@ -628,11 +628,11 @@ position = Vector2( 48, 1046 )
 scene = ExtResource( 13 )
 
 [node name="spawner2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 87, 997 )
+position = Vector2( 88, 966 )
 scene = ExtResource( 13 )
 
 [node name="spawner3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 133, 940 )
+position = Vector2( 134, 874 )
 scene = ExtResource( 13 )
 
 [node name="detectorLaser" parent="." instance=ExtResource( 14 )]
@@ -641,7 +641,7 @@ collision_layer = 1
 collision_mask = 1
 
 [node name="martillo" parent="." instance=ExtResource( 15 )]
-position = Vector2( 272, 434 )
+position = Vector2( 299, 542 )
 
 [node name="enemy" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1097, 697 )
@@ -653,7 +653,7 @@ position = Vector2( 1420, 391 )
 position = Vector2( 390, 699 )
 
 [node name="red_key" parent="." instance=ExtResource( 8 )]
-position = Vector2( -58, 35 )
+position = Vector2( 1455, -726 )
 
 [node name="cofre" parent="." instance=ExtResource( 11 )]
 position = Vector2( 65, -95 )
