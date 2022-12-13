@@ -4,7 +4,7 @@ onready var anim_player= $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
 onready var hiden_object = $blackBook
-export (PackedScene) var book 
+var book = preload("res://scene/interactive_objects/pickeable/blackBook.tscn")
 
 var used = false;
 var picked=true;

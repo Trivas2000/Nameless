@@ -1,10 +1,10 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://scene/players/player.gd" type="Script" id=1]
+[ext_resource path="res://assets/scene/players/player.gd" type="Script" id=1]
 [ext_resource path="res://texturas/personaje/sheets/DinoSprites - tard.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7, 3 )
+extents = Vector2( 13.75, 7 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -91,6 +91,9 @@ tracks/0/keys = {
 "values": [ 2, 4, 3, 5, 6, 7, 8 ]
 }
 
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "cick"
+
 [sub_resource type="AnimationNodeAnimation" id=15]
 animation = "hurt"
 
@@ -104,38 +107,32 @@ animation = "run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=8]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=22]
-switch_mode = 2
-auto_advance = true
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
 
 [sub_resource type="AnimationNodeStateMachine" id=9]
+states/cick/node = SubResource( 14 )
+states/cick/position = Vector2( 428.778, 172.86 )
 states/hurt/node = SubResource( 15 )
-states/hurt/position = Vector2( 575.222, 184.728 )
+states/hurt/position = Vector2( 713.222, 173.728 )
 states/idle/node = SubResource( 5 )
 states/idle/position = Vector2( 427.926, 69.6667 )
 states/run/node = SubResource( 6 )
 states/run/position = Vector2( 714, 77 )
-transitions = [ "idle", "run", SubResource( 7 ), "run", "idle", SubResource( 8 ), "run", "hurt", SubResource( 20 ), "idle", "hurt", SubResource( 21 ), "hurt", "idle", SubResource( 22 ) ]
+transitions = [ "idle", "run", SubResource( 7 ), "run", "idle", SubResource( 8 ), "idle", "cick", SubResource( 16 ), "cick", "idle", SubResource( 17 ) ]
 start_node = "idle"
-graph_offset = Vector2( 9.64092, 44.8815 )
+graph_offset = Vector2( -115.541, 31.2288 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=10]
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 17, 20.25 )
+extents = Vector2( 29.5, 36.5 )
 
-[node name="player" type="KinematicBody2D" groups=["players"]]
-collision_mask = 129
+[node name="player" type="KinematicBody2D"]
 script = ExtResource( 1 )
-inputindex = null
-texture = null
 
 [node name="Pivot" type="Node2D" parent="."]
-scale = Vector2( 0.5, 0.5 )
 
 [node name="Sprite" type="Sprite" parent="Pivot"]
 position = Vector2( 0, -26 )
@@ -148,7 +145,7 @@ frame = 1
 position = Vector2( 15, -16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1, 0 )
+position = Vector2( 0, -1 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -161,16 +158,11 @@ anims/run = SubResource( 4 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 9 )
 anim_player = NodePath("../AnimationPlayer")
-process_mode = 0
 parameters/playback = SubResource( 10 )
 
-[node name="Detector" type="Area2D" parent="." groups=["players"]]
-collision_mask = 22
+[node name="Detector" type="Area2D" parent="."]
+collision_mask = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Detector"]
-position = Vector2( 1, -11.75 )
+position = Vector2( -0.5, -28 )
 shape = SubResource( 11 )
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 1.2
-one_shot = true
