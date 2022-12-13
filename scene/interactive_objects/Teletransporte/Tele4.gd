@@ -8,13 +8,12 @@ extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready(): 
 	pass
-	
 	
 func _physics_process(delta):
 	pass
 	
-func use(player):
-	
-	player.position=Vector2(-1409, 1807)
+func use(player): 
+	player.global_position=Vector2(-1408, 1808)
+

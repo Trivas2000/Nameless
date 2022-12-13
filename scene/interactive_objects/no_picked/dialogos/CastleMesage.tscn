@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://resources/info.tres" type="Theme" id=1]
+[ext_resource path="res://texturas/Texturas/helper.tres" type="Texture" id=2]
+[ext_resource path="res://texturas/botones/dialog box big.png" type="Texture" id=3]
+[ext_resource path="res://scene/interactive_objects/no_picked/dialogos/CastleMesage.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 24.1868
+
+[node name="CastleMesage" type="Area2D"]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -11, 26 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -10, 26 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 32.6, -40 )
+scale = Vector2( 0.959091, 1.83333 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -44.0
+margin_top = -61.0
+margin_right = 1678.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.09, 0.09 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.215686, 0.227451, 0.211765, 1 )
+custom_colors/font_outline_modulate = Color( 0.00392157, 0, 0, 1 )
+custom_constants/line_spacing = 1
+text = "Have you seen a key? Maybe you should back off. Be careful, plants also like water."
+align = 1
+autowrap = true

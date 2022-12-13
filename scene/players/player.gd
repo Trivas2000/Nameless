@@ -28,6 +28,7 @@ onready var playback = anim_tree.get("parameters/playback")
 signal update_health_p1(health)
 signal update_health_p2(health) 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var main = get_tree().get_root().find_node("Main",true,false)
@@ -70,6 +71,10 @@ func _physics_process(delta):
 				damage(0.5)
 			else:
 				damage(1)	
+		if object.is_in_group("teletransportador"):
+				if (canTeletransport == true):
+					if (Input.is_action_just_pressed("ui_use_object"+str(inputindex))):
+						object.use(self)
 				
 	return 	
 		
@@ -93,6 +98,7 @@ func movement():
 				picked.set_scale(Vector2(1,1))
 			picked.global_position =pick_dino.global_position
 			
+			
 func damage(dmg):
 	if playback.get_current_node()!="hurt" and timer.get_time_left()==0:		
 		timer.start()
@@ -110,7 +116,7 @@ func update_life(index):
 
 func restart():
 	#position=Vector2(46,91)
-	position=Vector2(400,2000)
+	position=Vector2(400,-1600)
 	lives=maxlives
 	playback.travel("idle")
 
@@ -168,6 +174,8 @@ func _use_object():
 
 	for body in $Detector.get_overlapping_bodies():
 			if body.is_in_group("objects_not_pickeable"):
+				if body.is_in_group("teletransportador"):
+					return
 				if body.name == "cofre":
 					if canPick == false and picked.name == 'red_key':
 						body.use()

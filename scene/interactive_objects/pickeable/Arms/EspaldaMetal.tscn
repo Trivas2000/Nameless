@@ -4,8 +4,8 @@
 [ext_resource path="res://scene/interactive_objects/pickeable/Arms/EspaldaMetal.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 31.0
-height = 0.0
+radius = 39.0
+height = 22.0
 
 [sub_resource type="Animation" id=2]
 length = 0.001

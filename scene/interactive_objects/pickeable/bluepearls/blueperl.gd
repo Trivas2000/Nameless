@@ -1,32 +1,24 @@
 extends RigidBody2D
 
 var is_picked=false;
-var origin_position=Vector2(-445, -1247)
+var origin_position=Vector2(-391, -1846)
 
+var picked_by;
+var cont=200
+#onready var pos_player = get_node("../../players/player/Position2D").global_position;
 
-var timer := Timer.new()
-
-var picked_by; 
 
 
 func _ready():
 	#print(position)
 	add_to_group("objects_pickeable")
-	timer.wait_time = 3.0
-	timer.one_shot = true 
 
 #Al usarse debe mostrar en pantalla un mensaje
 func use(): 
-	picked_by.can_teletransport(0) 
-
-
-
+	picked_by.can_teletransport(0)  
+	self.queue_free()
+	
 func reaparecer():
-	timer.start()
-	timer.connect("timeout", self, "_on_timer_timeout")
-	
+	pass
 
 
-func _on_timer_timeout() -> void:
-	position = origin_position
-	
