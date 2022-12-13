@@ -8,10 +8,9 @@ extends Area2D
 func _ready():
 	pass
 	
-	
 func _physics_process(delta):
 	pass
 	
 func use(player):
-	
-	player.position=Vector2(-1354, -1203)
+	player.global_position=Vector2(-1340, -1220)
+

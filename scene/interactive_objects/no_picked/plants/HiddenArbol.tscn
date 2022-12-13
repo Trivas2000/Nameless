@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://texturas/Texturas/LVL2/TX Plant.png" type="Texture" id=1]
+[ext_resource path="res://scene/interactive_objects/no_picked/plants/HiddenArbol.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 56.0
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 94.0
+height = 0.0
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 22.25, 10.25, 119, 148 )
+
+[node name="HiddenArbol" type="StaticBody2D"]
+position = Vector2( 3, -66 )
+collision_layer = 4
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+position = Vector2( 0, -1 )
+shape = SubResource( 3 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+texture = SubResource( 1 )

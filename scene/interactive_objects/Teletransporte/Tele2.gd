@@ -13,6 +13,6 @@ func _ready():
 func _physics_process(delta):
 	pass
 	
-func use(player):
-	
-	player.position=Vector2(2495, -1212)
+func use(player): 
+	player.global_position=Vector2(2494, -1208)
+

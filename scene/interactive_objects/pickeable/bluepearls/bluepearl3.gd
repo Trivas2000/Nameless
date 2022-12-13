@@ -16,8 +16,7 @@ func _ready():
 #Al usarse debe mostrar en pantalla un mensaje
 func use(): 
 	picked_by.can_teletransport(2)  
+	self.queue_free()
 	
 func reaparecer():
-	while cont>0:
-		cont= cont-1
-	position = origin_position
+	pass
